@@ -1,5 +1,5 @@
 EDA Netlist Writer report for main
-Wed Oct 07 19:09:35 2026
+Wed Nov 11 11:11:02 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Oct 07 19:09:35 2026 ;
+; EDA Netlist Writer Status ; Successful - Wed Nov 11 11:11:02 2026 ;
 ; Revision Name             ; main                                  ;
 ; Top-level Entity Name     ; main                                  ;
 ; Family                    ; Cyclone V                             ;
@@ -65,13 +65,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                         ;
-+------------------------------------------------------------------------------------+
-; Generated Files                                                                    ;
-+------------------------------------------------------------------------------------+
-; C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/simulation/modelsim/main.vo ;
-+------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Simulation Generated Files                                                       ;
++----------------------------------------------------------------------------------+
+; Generated Files                                                                  ;
++----------------------------------------------------------------------------------+
+; C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/simulation/modelsim/main.vo ;
++----------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -80,14 +80,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Oct 07 19:09:33 2026
+    Info: Processing started: Wed Nov 11 11:11:01 2026
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file main.vo in folder "C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file main.vo in folder "C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4723 megabytes
-    Info: Processing ended: Wed Oct 07 19:09:35 2026
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4724 megabytes
+    Info: Processing ended: Wed Nov 11 11:11:02 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

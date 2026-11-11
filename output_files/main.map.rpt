@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Wed Oct 07 19:07:54 2026
+Wed Nov 11 11:09:43 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,9 +14,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: ps2:ps2_inst|deb:deb_inst
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -42,14 +45,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 07 19:07:54 2026       ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 11 11:09:43 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; main                                        ;
 ; Top-level Entity Name           ; main                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 87                                          ;
+; Total registers                 ; 58                                          ;
+; Total pins                      ; 89                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -158,56 +161,66 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                  ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
-; main.v                           ; yes             ; User Verilog HDL File  ; C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                              ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File  ; C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v ;         ;
+; ps2.v                            ; yes             ; User Verilog HDL File  ; C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/ps2.v  ;         ;
+; hex.v                            ; yes             ; User Verilog HDL File  ; C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/hex.v  ;         ;
+; deb.v                            ; yes             ; User Verilog HDL File  ; C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/deb.v  ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimate of Logic utilization (ALMs needed) ; 1      ;
-;                                             ;        ;
-; Combinational ALUT usage for logic          ; 1      ;
-;     -- 7 input functions                    ; 0      ;
-;     -- 6 input functions                    ; 0      ;
-;     -- 5 input functions                    ; 0      ;
-;     -- 4 input functions                    ; 1      ;
-;     -- <=3 input functions                  ; 0      ;
-;                                             ;        ;
-; Dedicated logic registers                   ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 87     ;
-;                                             ;        ;
-; Total DSP Blocks                            ; 0      ;
-;                                             ;        ;
-; Maximum fan-out node                        ; LEDR~0 ;
-; Maximum fan-out                             ; 1      ;
-; Total fan-out                               ; 92     ;
-; Average fan-out                             ; 0.53   ;
-+---------------------------------------------+--------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 64             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 103            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 23             ;
+;     -- 5 input functions                    ; 12             ;
+;     -- 4 input functions                    ; 44             ;
+;     -- <=3 input functions                  ; 24             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 58             ;
+;                                             ;                ;
+; I/O pins                                    ; 89             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 58             ;
+; Total fan-out                               ; 772            ;
+; Average fan-out                             ; 2.28           ;
++---------------------------------------------+----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |main                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 87   ; 0            ; |main               ; main        ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-------------+--------------+
+; |main                      ; 103 (0)             ; 58 (0)                    ; 0                 ; 0          ; 89   ; 0            ; |main                             ; main        ; work         ;
+;    |ps2:ps2_inst|          ; 103 (71)            ; 58 (52)                   ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst                ; ps2         ; work         ;
+;       |deb:deb_inst|       ; 4 (4)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|deb:deb_inst   ; deb         ; work         ;
+;       |hex:hex_inst_1|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|hex:hex_inst_1 ; hex         ; work         ;
+;       |hex:hex_inst_2|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|hex:hex_inst_2 ; hex         ; work         ;
+;       |hex:hex_inst_3|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|hex:hex_inst_3 ; hex         ; work         ;
+;       |hex:hex_inst_4|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|hex:hex_inst_4 ; hex         ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -216,14 +229,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 58    ;
+; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 58    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 40    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; ps2:ps2_inst|parity_reg                ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |main|ps2:ps2_inst|idle_cnt[0]  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |main|ps2:ps2_inst|cnt_reg[2]   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |main|ps2:ps2_inst|data_reg[15] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |main|ps2:ps2_inst|data_reg[11] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ps2:ps2_inst|deb:deb_inst ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 3     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -231,14 +276,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 2                           ;
-;     normal            ; 2                           ;
-;         0 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
-; boundary_port         ; 87                          ;
+; arriav_ff             ; 58                          ;
+;     CLR               ; 18                          ;
+;     ENA CLR           ; 24                          ;
+;     ENA CLR SCLR      ; 16                          ;
+; arriav_lcell_comb     ; 109                         ;
+;     arith             ; 16                          ;
+;         1 data inputs ; 16                          ;
+;     normal            ; 93                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 44                          ;
+;         5 data inputs ; 12                          ;
+;         6 data inputs ; 23                          ;
+; boundary_port         ; 89                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.83                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.07                        ;
 +-----------------------+-----------------------------+
 
 
@@ -257,119 +313,94 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Oct 07 19:07:38 2026
+    Info: Processing started: Wed Nov 11 11:09:32 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
-    Info (12023): Found entity 1: main File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 4
+    Info (12023): Found entity 1: main File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file ps2.v
+    Info (12023): Found entity 1: ps2 File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/ps2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hex.v
+    Info (12023): Found entity 1: hex File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/hex.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file deb.v
+    Info (12023): Found entity 1: deb File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/deb.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at deb.v(19): created implicit net for "in_changed" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/deb.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at deb.v(20): created implicit net for "in_stable" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/deb.v Line: 20
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10034): Output port "HEX0" at main.v(8) has no driver File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 8
-Warning (10034): Output port "HEX1" at main.v(9) has no driver File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 9
-Warning (10034): Output port "HEX2" at main.v(10) has no driver File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 10
-Warning (10034): Output port "HEX3" at main.v(11) has no driver File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 11
-Warning (10034): Output port "HEX4" at main.v(12) has no driver File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 12
-Warning (10034): Output port "HEX5" at main.v(13) has no driver File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 13
-Warning (10034): Output port "x" at main.v(15) has no driver File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 15
-Warning (10034): Output port "y" at main.v(16) has no driver File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 16
-Warning (10034): Output port "colour" at main.v(17) has no driver File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 17
-Warning (10034): Output port "plot" at main.v(18) has no driver File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 18
-Warning (10034): Output port "vga_resetn" at main.v(20) has no driver File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 20
+Info (12128): Elaborating entity "ps2" for hierarchy "ps2:ps2_inst" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 36
+Info (12128): Elaborating entity "hex" for hierarchy "ps2:ps2_inst|hex:hex_inst_1" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/ps2.v Line: 41
+Info (12128): Elaborating entity "deb" for hierarchy "ps2:ps2_inst|deb:deb_inst" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/ps2.v Line: 54
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 8
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 8
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 8
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 8
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 8
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 8
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 8
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 9
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 9
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 9
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 9
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 9
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 9
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 9
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 10
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 10
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 10
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 10
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 10
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 10
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 10
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 11
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 11
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 11
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 11
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 11
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 11
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 11
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 12
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 12
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 12
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 12
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 12
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 12
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 12
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 13
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 13
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 13
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 13
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 13
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 13
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 13
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 14
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 14
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 14
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 14
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 14
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 14
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 14
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 14
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 14
-    Warning (13410): Pin "x[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 15
-    Warning (13410): Pin "x[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 15
-    Warning (13410): Pin "x[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 15
-    Warning (13410): Pin "x[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 15
-    Warning (13410): Pin "x[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 15
-    Warning (13410): Pin "x[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 15
-    Warning (13410): Pin "x[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 15
-    Warning (13410): Pin "x[7]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 15
-    Warning (13410): Pin "y[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 16
-    Warning (13410): Pin "y[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 16
-    Warning (13410): Pin "y[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 16
-    Warning (13410): Pin "y[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 16
-    Warning (13410): Pin "y[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 16
-    Warning (13410): Pin "y[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 16
-    Warning (13410): Pin "y[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 16
-    Warning (13410): Pin "colour[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 17
-    Warning (13410): Pin "colour[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 17
-    Warning (13410): Pin "colour[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 17
-    Warning (13410): Pin "plot" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 18
-    Warning (13410): Pin "vga_resetn" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 20
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 16
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 16
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 16
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 16
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 16
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 16
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 16
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 17
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 17
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 17
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 17
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 17
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 17
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 17
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "x[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 19
+    Warning (13410): Pin "x[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 19
+    Warning (13410): Pin "x[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 19
+    Warning (13410): Pin "x[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 19
+    Warning (13410): Pin "x[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 19
+    Warning (13410): Pin "x[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 19
+    Warning (13410): Pin "x[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 19
+    Warning (13410): Pin "x[7]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 19
+    Warning (13410): Pin "y[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 20
+    Warning (13410): Pin "y[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 20
+    Warning (13410): Pin "y[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 20
+    Warning (13410): Pin "y[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 20
+    Warning (13410): Pin "y[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 20
+    Warning (13410): Pin "y[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 20
+    Warning (13410): Pin "y[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 20
+    Warning (13410): Pin "colour[0]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 21
+    Warning (13410): Pin "colour[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 21
+    Warning (13410): Pin "colour[2]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 21
+    Warning (13410): Pin "plot" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 22
+    Warning (13410): Pin "vga_resetn" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 24
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 6
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 7
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 7
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 7
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/University/Year 2/ECE241/fake_fpga/LABS/LabTemplate/main.v Line: 7
-Info (21057): Implemented 88 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 11
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 11
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 11
+Info (21057): Implemented 213 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
     Info (21059): Implemented 72 output pins
-    Info (21061): Implemented 1 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 96 warnings
-    Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Wed Oct 07 19:07:54 2026
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:37
+    Info (21061): Implemented 124 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Peak virtual memory: 4871 megabytes
+    Info: Processing ended: Wed Nov 11 11:09:43 2026
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:22
 
 
