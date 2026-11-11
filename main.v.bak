@@ -1,0 +1,12 @@
+module main (
+    input  a, b, c, d,
+    output LEDR
+);
+    wire an = ~a;
+    wire bn = ~b;
+    wire cn = ~c;
+    wire dn = ~d;
+
+    assign LEDR = (an & bn & cn) | (b & (an & cn | a & dn)) | (an & b & dn);
+
+endmodule
