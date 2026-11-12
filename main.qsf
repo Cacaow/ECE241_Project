@@ -49,12 +49,9 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name VERILOG_FILE main.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name TCL_SCRIPT_FILE fake_fpga/u_of_t_scripts/compile_sim.tcl
-set_global_assignment -name TCL_SCRIPT_FILE ../u_of_t_scripts/compile_sim.tcl
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name EDA_MAINTAIN_DESIGN_HIERARCHY ON -section_id eda_simulation
 set_global_assignment -name BOARD "DE1-SoC Board"
@@ -316,7 +313,16 @@ set_location_assignment PIN_E12 -to VGA_R[6]
 set_location_assignment PIN_F13 -to VGA_R[7]
 set_location_assignment PIN_C10 -to VGA_SYNC_N
 set_location_assignment PIN_D11 -to VGA_VS
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE vga_pll.v
+set_global_assignment -name VERILOG_FILE vga_controller.v
+set_global_assignment -name VERILOG_FILE vga_address_translator.v
+set_global_assignment -name VERILOG_FILE vga_adapter.v
+set_global_assignment -name VERILOG_FILE main.v
+set_global_assignment -name TCL_SCRIPT_FILE fake_fpga/u_of_t_scripts/compile_sim.tcl
+set_global_assignment -name TCL_SCRIPT_FILE ../u_of_t_scripts/compile_sim.tcl
 set_global_assignment -name VERILOG_FILE ps2.v
 set_global_assignment -name VERILOG_FILE hex.v
 set_global_assignment -name VERILOG_FILE deb.v
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
