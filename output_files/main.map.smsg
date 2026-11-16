@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at key_detect.v(38): always construct contains both blocking and non-blocking assignments File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/key_detect.v Line: 38

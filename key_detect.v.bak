@@ -1,0 +1,57 @@
+module key_detect (
+    input  wire       clk,
+    input  wire [6:0] seg_h_hi,     // older byte, high digit  (HEX3)
+    input  wire [6:0] seg_h_lo,     // older byte, low digit   (HEX2)
+    input  wire [6:0] seg_l_hi,     // newest byte, high digit (HEX1)
+    input  wire [6:0] seg_l_lo,     // newest byte, low digit  (HEX0)
+    output wire       down,
+    output wire       pressed,
+    output wire       released
+);
+	parameter [7:0] KEY_CODE = 8'h29
+
+
+    // remember `down` from one clock ago -> edges
+    reg down_prev;
+    always @(posedge clk) down_prev <= down;
+
+    assign pressed  =  down && !down_prev;
+    assign released = !down &&  down_prev;
+	 
+	 
+	 space_b = 1'b0;
+	
+	button_held_end = (HEX3 == ~7'h71) && (HEX2 == ~7'h3F);
+	
+	space_pressed = (HEX1 == ~7'h5B) && (HEX0 == ~7'h6F);
+	up_pressed = (HEX1 == ~7'h06) && (HEX0 == ~7'h5E);  //W key
+	down_pressed = (HEX1 == ~7'h06) && (HEX0 == ~7'h7C);	//S key
+	space_down = space_pressed & !button_held_end;
+	
+	//check for initial space press (rising edge)
+	reg space_prev;
+	always @(posedge CLOCK_50) begin
+		space_prev <= space_down;
+		wire space_press_init = space_down && !space_prev;
+	end
+	
+	//calculate jump distance
+	localparam [5:0] MAX_DIST = 6'd40;
+	reg[5:0] hold_count;
+	reg[5:0] move_dist;
+	reg move_req;
+	
+	
+	//checking keyboard inputs
+	always @(*) begin
+		if (space_down) begin //spacebar pressed
+			space_b <= 1'b1;
+			draw_started <= 1'b0;
+		end else begin
+			space_b <= 1'b0;
+		end
+	
+	end
+	
+
+endmodule

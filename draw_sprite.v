@@ -4,6 +4,7 @@ module draw_sprite(
     input  wire       start,
     input  wire [7:0] px,
     input  wire [6:0] py,
+	 input  wire [8:0] sprite_color,
     output reg  [7:0] x,
     output reg  [6:0] y,
     output reg  [8:0] color,
@@ -11,12 +12,11 @@ module draw_sprite(
     output reg        done
 	 ); 
 
-	//px, py = top left corner of the sprite
+	//px, py = top left corner of the sprite on the screen (initial position)
 	//x, y = position of the pixel on the screen
 	//sprite_color = color of the pixel
 	
 	parameter W = 4, H = 8;
-	parameter sprite_color = 9'b000_000_000;
 	reg [3:0] dx, dy;           // offset of the current pixel from the corner
 	reg busy;
 	
