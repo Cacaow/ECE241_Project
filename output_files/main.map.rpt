@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Sun Nov 15 23:50:05 2026
+Mon Nov 16 18:39:43 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -16,26 +16,25 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. State Machine - |main|state
  10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated
- 16. Parameter Settings for User Entity Instance: ps2:ps2_inst|deb:deb_inst
- 17. Parameter Settings for User Entity Instance: vga_adapter:VGA
- 18. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
- 19. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
- 20. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 21. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
- 22. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 23. Parameter Settings for User Entity Instance: draw_sprite:sprite_inst
- 24. altsyncram Parameter Settings by Entity Instance
- 25. altpll Parameter Settings by Entity Instance
- 26. Port Connectivity Checks: "key_detect:keys"
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
- 30. Analysis & Synthesis Suppressed Messages
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated
+ 15. Parameter Settings for User Entity Instance: ps2:ps2_inst|deb:deb_inst
+ 16. Parameter Settings for User Entity Instance: vga_adapter:VGA
+ 17. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
+ 18. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
+ 19. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 20. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
+ 21. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 22. Parameter Settings for User Entity Instance: draw_sprite:sprite_inst
+ 23. altsyncram Parameter Settings by Entity Instance
+ 24. altpll Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "key_detect:keys"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+ 29. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -61,13 +60,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 15 23:50:05 2026       ;
+; Analysis & Synthesis Status     ; Successful - Mon Nov 16 18:39:43 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; main                                        ;
 ; Top-level Entity Name           ; main                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 144                                         ;
+; Total registers                 ; 201                                         ;
 ; Total pins                      ; 98                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 172,800                                     ;
@@ -227,16 +226,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 143            ;
+; Estimate of Logic utilization (ALMs needed) ; 187            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 229            ;
+; Combinational ALUT usage for logic          ; 306            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 54             ;
-;     -- 5 input functions                    ; 33             ;
-;     -- 4 input functions                    ; 50             ;
-;     -- <=3 input functions                  ; 92             ;
+;     -- 6 input functions                    ; 65             ;
+;     -- 5 input functions                    ; 34             ;
+;     -- 4 input functions                    ; 56             ;
+;     -- <=3 input functions                  ; 151            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 144            ;
+; Dedicated logic registers                   ; 201            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 98             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -248,9 +247,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 142            ;
-; Total fan-out                               ; 2340           ;
-; Average fan-out                             ; 3.92           ;
+; Maximum fan-out                             ; 199            ;
+; Total fan-out                               ; 2744           ;
+; Average fan-out                             ; 3.75           ;
 +---------------------------------------------+----------------+
 
 
@@ -259,22 +258,22 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Entity Name            ; Library Name ;
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |main                                                   ; 229 (2)             ; 144 (2)                   ; 172800            ; 0          ; 98   ; 0            ; |main                                                                                                ; main                   ; work         ;
-;    |draw_sprite:sprite_inst|                            ; 25 (25)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |main|draw_sprite:sprite_inst                                                                        ; draw_sprite            ; work         ;
-;    |key_detect:keys|                                    ; 30 (30)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |main|key_detect:keys                                                                                ; key_detect             ; work         ;
-;    |ps2:ps2_inst|                                       ; 103 (71)            ; 58 (52)                   ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst                                                                                   ; ps2                    ; work         ;
+; |main                                                   ; 306 (75)            ; 201 (54)                  ; 172800            ; 0          ; 98   ; 0            ; |main                                                                                                ; main                   ; work         ;
+;    |draw_sprite:sprite_inst|                            ; 30 (30)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |main|draw_sprite:sprite_inst                                                                        ; draw_sprite            ; work         ;
+;    |key_detect:keys|                                    ; 32 (32)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |main|key_detect:keys                                                                                ; key_detect             ; work         ;
+;    |ps2:ps2_inst|                                       ; 99 (67)             ; 58 (52)                   ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst                                                                                   ; ps2                    ; work         ;
 ;       |deb:deb_inst|                                    ; 4 (4)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|deb:deb_inst                                                                      ; deb                    ; work         ;
 ;       |hex:hex_inst_1|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|hex:hex_inst_1                                                                    ; hex                    ; work         ;
 ;       |hex:hex_inst_2|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|hex:hex_inst_2                                                                    ; hex                    ; work         ;
 ;       |hex:hex_inst_3|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|hex:hex_inst_3                                                                    ; hex                    ; work         ;
 ;       |hex:hex_inst_4|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|hex:hex_inst_4                                                                    ; hex                    ; work         ;
-;    |vga_adapter:VGA|                                    ; 69 (0)              ; 30 (0)                    ; 172800            ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA                                                                                ; vga_adapter            ; work         ;
+;    |vga_adapter:VGA|                                    ; 70 (1)              ; 30 (0)                    ; 172800            ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA                                                                                ; vga_adapter            ; work         ;
 ;       |altsyncram:VideoMemory|                          ; 6 (0)               ; 4 (0)                     ; 172800            ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|altsyncram:VideoMemory                                                         ; altsyncram             ; work         ;
 ;          |altsyncram_svm1:auto_generated|               ; 6 (0)               ; 4 (4)                     ; 172800            ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated                          ; altsyncram_svm1        ; work         ;
 ;             |decode_01a:rden_decode_b|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|decode_01a:rden_decode_b ; decode_01a             ; work         ;
 ;             |decode_7la:decode2|                        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|decode_7la:decode2       ; decode_7la             ; work         ;
-;       |vga_address_translator:user_input_translator|    ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|vga_address_translator:user_input_translator                                   ; vga_address_translator ; work         ;
-;       |vga_controller:controller|                       ; 54 (44)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|vga_controller:controller                                                      ; vga_controller         ; work         ;
+;       |vga_address_translator:user_input_translator|    ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|vga_address_translator:user_input_translator                                   ; vga_address_translator ; work         ;
+;       |vga_controller:controller|                       ; 53 (43)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|vga_controller:controller                                                      ; vga_controller         ; work         ;
 ;          |vga_address_translator:controller_translator| ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator         ; vga_address_translator ; work         ;
 ;       |vga_pll:mypll|                                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|vga_pll:mypll                                                                  ; vga_pll                ; work         ;
 ;          |altpll:altpll_component|                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component                                          ; altpll                 ; work         ;
@@ -316,54 +315,11 @@ Encoding Type:  One-Hot
 ; sprite_y[6]                            ; Stuck at GND due to stuck port data_in       ;
 ; draw_sprite:sprite_inst|color[1..8]    ; Merged with draw_sprite:sprite_inst|color[0] ;
 ; sprite_color[1..8]                     ; Merged with sprite_color[0]                  ;
-; move_req                               ; Stuck at GND due to stuck port data_in       ;
-; move_dist[0..5]                        ; Stuck at GND due to stuck port data_in       ;
-; hold_count[0]                          ; Lost fanout                                  ;
-; slow_count[0..25]                      ; Lost fanout                                  ;
-; hold_count[3..5]                       ; Lost fanout                                  ;
-; key_detect:keys|space_prev             ; Lost fanout                                  ;
-; hold_count[1,2]                        ; Lost fanout                                  ;
-; sprite_x[0]                            ; Stuck at GND due to stuck port data_in       ;
-; sprite_color[0]                        ; Stuck at GND due to stuck port data_in       ;
-; draw_sprite:sprite_inst|color[0]       ; Stuck at GND due to stuck port data_in       ;
-; sprite_x[1..3]                         ; Stuck at VCC due to stuck port data_in       ;
-; sprite_x[4,5]                          ; Stuck at GND due to stuck port data_in       ;
-; sprite_x[6]                            ; Stuck at VCC due to stuck port data_in       ;
-; sprite_x[7]                            ; Stuck at GND due to stuck port data_in       ;
-; draw_sprite:sprite_inst|x[7]           ; Stuck at GND due to stuck port data_in       ;
-; state.S_ERASE                          ; Lost fanout                                  ;
 ; state~7                                ; Lost fanout                                  ;
 ; state~8                                ; Lost fanout                                  ;
-; state.S_DRAW_WAIT                      ; Lost fanout                                  ;
-; state.S_IDLE                           ; Lost fanout                                  ;
 ; draw_sprite:sprite_inst|y[4,5]         ; Merged with draw_sprite:sprite_inst|y[3]     ;
-; draw_sprite:sprite_inst|x[5]           ; Stuck at GND due to stuck port data_in       ;
-; state.S_ERASE_WAIT                     ; Stuck at GND due to stuck port data_in       ;
-; draw_sprite:sprite_inst|done           ; Lost fanout                                  ;
-; Total Number of Removed Registers = 84 ;                                              ;
+; Total Number of Removed Registers = 27 ;                                              ;
 +----------------------------------------+----------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                             ;
-+-----------------+---------------------------+-------------------------------------------------------------------------------------------+
-; Register name   ; Reason for Removal        ; Registers Removed due to This Register                                                    ;
-+-----------------+---------------------------+-------------------------------------------------------------------------------------------+
-; hold_count[0]   ; Lost Fanouts              ; slow_count[11], slow_count[2], slow_count[1], slow_count[0], slow_count[21],              ;
-;                 ;                           ; slow_count[25], slow_count[24], slow_count[23], slow_count[22], slow_count[20],           ;
-;                 ;                           ; slow_count[19], slow_count[18], slow_count[17], slow_count[16], slow_count[15],           ;
-;                 ;                           ; slow_count[14], slow_count[13], slow_count[12], slow_count[10], slow_count[9],            ;
-;                 ;                           ; slow_count[8], slow_count[7], slow_count[6], slow_count[5], slow_count[4], slow_count[3], ;
-;                 ;                           ; hold_count[5], key_detect:keys|space_prev                                                 ;
-; move_dist[0]    ; Stuck at GND              ; sprite_x[2], sprite_x[3], sprite_x[4], sprite_x[5], sprite_x[6], sprite_x[7]              ;
-;                 ; due to stuck port data_in ;                                                                                           ;
-; sprite_x[0]     ; Stuck at GND              ; sprite_x[1], draw_sprite:sprite_inst|x[7], draw_sprite:sprite_inst|x[5]                   ;
-;                 ; due to stuck port data_in ;                                                                                           ;
-; move_req        ; Stuck at GND              ; draw_sprite:sprite_inst|done                                                              ;
-;                 ; due to stuck port data_in ;                                                                                           ;
-; sprite_color[0] ; Stuck at GND              ; draw_sprite:sprite_inst|color[0]                                                          ;
-;                 ; due to stuck port data_in ;                                                                                           ;
-+-----------------+---------------------------+-------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -371,12 +327,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 144   ;
-; Number of registers using Synchronous Clear  ; 52    ;
+; Total registers                              ; 201   ;
+; Number of registers using Synchronous Clear  ; 86    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 78    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 65    ;
+; Number of registers using Clock Enable       ; 88    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -387,7 +343,11 @@ Encoding Type:  One-Hot
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; ps2:ps2_inst|parity_reg                ; 2       ;
-; Total number of inverted registers = 1 ;         ;
+; sprite_x[6]                            ; 2       ;
+; sprite_x[1]                            ; 2       ;
+; sprite_x[2]                            ; 2       ;
+; sprite_x[3]                            ; 2       ;
+; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
 
@@ -396,21 +356,21 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |main|vga_adapter:VGA|vga_controller:controller|yCounter[4]                                             ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |main|draw_sprite:sprite_inst|y[0]                                                                      ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |main|move_dist[3]                                                                                      ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |main|ps2:ps2_inst|idle_cnt[5]                                                                          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |main|sprite_x[4]                                                                                       ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |main|ps2:ps2_inst|cnt_reg[2]                                                                           ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |main|vga_adapter:VGA|vga_controller:controller|yCounter[6]                                             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |main|draw_sprite:sprite_inst|x[0]                                                                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|sprite_x[4]                                                                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |main|ps2:ps2_inst|idle_cnt[7]                                                                          ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |main|move_dist[1]                                                                                      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |main|ps2:ps2_inst|cnt_reg[1]                                                                           ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |main|draw_sprite:sprite_inst|dy[1]                                                                     ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |main|hold_count[0]                                                                                     ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |main|ps2:ps2_inst|data_reg[15]                                                                         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |main|ps2:ps2_inst|data_reg[10]                                                                         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |main|draw_sprite:sprite_inst|dx[1]                                                                     ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |main|hold_count[0]                                                                                     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |main|sprite_x[6]                                                                                       ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |main|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|mux_ofb:mux3|result_node[0] ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |main|state                                                                                             ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |main|state                                                                                             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |main|ps2:ps2_inst|data_reg[8]                                                                          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |main|draw_sprite:sprite_inst|dx[3]                                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|sprite_x[1]                                                                                       ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |main|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|mux_ofb:mux3|result_node[1] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |main|state                                                                                             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |main|state                                                                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
 
 
@@ -999,37 +959,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 144                         ;
+; arriav_ff             ; 201                         ;
 ;     CLR               ; 18                          ;
 ;     CLR SCLR          ; 10                          ;
-;     ENA               ; 4                           ;
+;     ENA               ; 24                          ;
 ;     ENA CLR           ; 24                          ;
 ;     ENA CLR SCLR      ; 26                          ;
-;     ENA SCLR          ; 11                          ;
-;     SCLR              ; 5                           ;
-;     plain             ; 46                          ;
-; arriav_lcell_comb     ; 234                         ;
-;     arith             ; 36                          ;
-;         1 data inputs ; 36                          ;
-;     normal            ; 179                         ;
+;     ENA SCLR          ; 14                          ;
+;     SCLR              ; 36                          ;
+;     plain             ; 49                          ;
+; arriav_lcell_comb     ; 312                         ;
+;     arith             ; 78                          ;
+;         1 data inputs ; 68                          ;
+;         2 data inputs ; 10                          ;
+;     normal            ; 214                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 15                          ;
-;         3 data inputs ; 15                          ;
-;         4 data inputs ; 50                          ;
-;         5 data inputs ; 33                          ;
-;         6 data inputs ; 54                          ;
-;     shared            ; 19                          ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 19                          ;
+;         4 data inputs ; 56                          ;
+;         5 data inputs ; 34                          ;
+;         6 data inputs ; 65                          ;
+;     shared            ; 20                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 11                          ;
-;         3 data inputs ; 1                           ;
+;         3 data inputs ; 2                           ;
 ; boundary_port         ; 98                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 27                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.26                        ;
+; Average LUT depth     ; 2.27                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1038,7 +999,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1048,7 +1009,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 15 23:49:57 2026
+    Info: Processing started: Mon Nov 16 18:39:24 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -1078,7 +1039,7 @@ Warning (10236): Verilog HDL Implicit Net warning at key_detect.v(26): created i
 Warning (10236): Verilog HDL Implicit Net warning at key_detect.v(27): created implicit net for "new_w" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/key_detect.v Line: 27
 Warning (10236): Verilog HDL Implicit Net warning at key_detect.v(28): created implicit net for "new_s" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/key_detect.v Line: 28
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at main.v(155): truncated value with size 32 to match size of target (8) File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 155
+Warning (10230): Verilog HDL assignment warning at main.v(157): truncated value with size 32 to match size of target (8) File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 157
 Warning (10036): Verilog HDL or VHDL warning at main.v(39): object "score" assigned a value but never read File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 39
 Warning (10034): Output port "HEX4" at main.v(16) has no driver File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 16
 Warning (10034): Output port "HEX5" at main.v(17) has no driver File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 17
@@ -1137,7 +1098,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/altp
 Info (12128): Elaborating entity "altpll_80u" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_controller:controller" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_adapter.v Line: 189
 Info (12128): Elaborating entity "key_detect" for hierarchy "key_detect:keys" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 124
-Info (12128): Elaborating entity "draw_sprite" for hierarchy "draw_sprite:sprite_inst" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 174
+Info (12128): Elaborating entity "draw_sprite" for hierarchy "draw_sprite:sprite_inst" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 176
 Warning (10230): Verilog HDL assignment warning at draw_sprite.v(43): truncated value with size 32 to match size of target (4) File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/draw_sprite.v Line: 43
 Warning (10230): Verilog HDL assignment warning at draw_sprite.v(44): truncated value with size 32 to match size of target (4) File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/draw_sprite.v Line: 44
 Warning (13024): Output pins are stuck at VCC or GND
@@ -1155,9 +1116,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 17
     Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 17
     Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 17
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
     Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
     Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 18
@@ -1170,7 +1128,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 29
     Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 33
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 39 registers lost all their fanouts during netlist optimizations.
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/output_files/main.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -1190,17 +1148,17 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 11
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 11
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 11
-Info (21057): Implemented 414 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 491 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 81 output pins
-    Info (21061): Implemented 288 logic cells
+    Info (21061): Implemented 365 logic cells
     Info (21064): Implemented 27 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 56 warnings
-    Info: Peak virtual memory: 4920 megabytes
-    Info: Processing ended: Sun Nov 15 23:50:05 2026
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:14
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 4918 megabytes
+    Info: Processing ended: Mon Nov 16 18:39:43 2026
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:38
 
 
 +------------------------------------------+

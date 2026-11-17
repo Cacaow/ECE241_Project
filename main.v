@@ -140,11 +140,13 @@ module main (
 		end else if (space_down) begin
 			if (tick && (hold_count < MAX_DIST)) begin
 				hold_count <= hold_count + 1'b1;
-			end else if (space_release) begin
+			end 
+		end
+		else if (space_release) begin
 				move_dist <= hold_count;
 				move_req <= (hold_count != 6'd0);
 				hold_count <= 6'd0;
-			end
+			
 		end
 	
 	end
@@ -158,7 +160,7 @@ module main (
 	reg[6:0] sprite_y = 7'd56;
 	reg [8:0] sprite_color = BLACK;
 	reg sprite_start;
-	
+
 	draw_sprite sprite_inst (
 		.clk          (CLOCK_50),
 		.resetn       (resetn),
@@ -172,6 +174,7 @@ module main (
 		.plot         (plot),
 		.done         (done)
 	);
+	
 	
 	localparam S_DRAW			= 3'd0,	//draw the sprite
 				  S_DRAW_WAIT	= 3'd1,
@@ -205,20 +208,22 @@ module main (
 					state <= S_ERASE_WAIT;
 				end
 				S_ERASE_WAIT: if (done) begin
+				/*
 					if (X_MAX - sprite_x < move_dist) begin
 						sprite_x <= X_MAX; //TEMPORARY
 						//SET GAME OVER CONDITION
 					end else begin
+					*/
 						sprite_x <= sprite_x + move_dist;
 						state <= S_DRAW;
-					end
+					//end
 				end
 				default: state <= S_DRAW;
 			endcase
 		end
 	end
 	
-	assign LEDR = {7'b0, s_down, w_down, space_down};
+	assign LEDR = {4'b0, space_down, space_press, space_release, s_down, w_down, space_down};
 	
 
 endmodule
