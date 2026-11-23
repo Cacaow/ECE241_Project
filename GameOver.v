@@ -58,9 +58,9 @@ module GameOver(
 						  C_R=4'd7;
 	 
 	//font ROM
-	wire [3:0] idx  = tx[7:4];   // which character in the string
-   wire [2:0] gcol = tx[3:1];   // font column (0..4 used)
-   wire [2:0] grow = ty[3:1];   // font row    (0..6 used)
+	wire [3:0] idx  = tx[7:4];   // which character in the string: tx/16
+   wire [2:0] gcol = tx[3:1];   // font column (0..4 used) since 5 cols per character (divides tx by 2)
+   wire [2:0] grow = ty[3:1];   // font row    (0..6 used) since 7 rows per character (divides ty by 2)
 
 	reg [3:0] ch;
 	

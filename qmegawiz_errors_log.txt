@@ -1,0 +1,10 @@
+
+
+C:/ECE241/ECE241_Project/vga_pll.v
+
+Nov 17 02PM:33:52>: Error in CNX file format.
+
+Error messages are listed in file
+C:/ECE241/ECE241_Project/vga_pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)
