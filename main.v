@@ -49,8 +49,6 @@ module main (
             slow_count <= slow_count + 1'b1;
     end
 
-	
-
 	//instantiate the ps2 (keyboard)
 	ps2 ps2_inst (
 		.clk            (CLOCK_50),
@@ -122,34 +120,6 @@ module main (
 		.s_released     (s_release)
 	);
 	
-	//charge logic: hold space to charge, release to launch
-	localparam[5:0] MAX_DIST = 6'd40;
-	reg[5:0] hold_count;
-	reg[5:0] move_dist;
-	reg move_req;
-	
-	always @(posedge CLOCK_50) begin
-		move_req <= 1'b0;
-		if (!resetn) begin
-			hold_count <= 6'd0;
-			move_dist <= 6'd0;
-			
-		end else if (space_press) begin
-			hold_count <= 6'd1;
-			
-		end else if (space_down) begin
-			if (tick && (hold_count < MAX_DIST)) begin
-				hold_count <= hold_count + 1'b1;
-			end 
-		end
-		else if (space_release) begin
-				move_dist <= hold_count;
-				move_req <= (hold_count != 6'd0);
-				hold_count <= 6'd0;
-			
-		end
-	
-	end
 	
 	//sprite settings
 	localparam [8:0] WHITE = 9'b111_111_111;
@@ -167,29 +137,84 @@ module main (
 				  S_IDLE			= 3'd2,
 				  S_ERASE		= 3'd3,
 				  S_ERASE_WAIT	= 3'd4,
-				  S_CLEAR		= 3'd5,	//repaint the whole screen white (after every reset)
-				  S_GAMEOVER	= 3'd6;	//GameOver module owns the screen until reset
+				  S_GAMEOVER	= 3'd6;	//GameOver until reset
 	reg[2:0] state;
 	
-	//score (two BCD digits, shown on HEX5/HEX4 by GameOver)
-	reg [3:0] score_tens, score_ones;
-	//a successful move = sprite finished erasing and did NOT run off the edge
-	wire move_ok = (state == S_ERASE_WAIT) && done && !(X_MAX - sprite_x < move_dist);
+	//DISTANCE
+	localparam[9:0] MAX_DIST = 9'd200;
+	reg[9:0] hold_count;
+	reg[9:0] move_dist;
+	reg move_req;
 	
-	//white-clear counters (these are also the pixel being written during S_CLEAR)
-	reg [7:0] clr_x;
-	reg [6:0] clr_y;
-	wire clr_done = (clr_x == 8'd159) && (clr_y == 7'd119);
 	
-	//who drives the VGA adapter right now
-	wire go_active  = (state == S_GAMEOVER);
-	wire clr_active = (state == S_CLEAR);
-
-	//draw_sprite outputs (go through the mux, not straight to the adapter)
+	//ANGLE
+	localparam[9:0]MAX_ANGLE = 180;
+	localparam[9:0]MIN_ANGLE = 0;
+	reg[9:0] angle = 90;
+	reg[9:0] move_angle;
+	
+	wire angle_up = w_press || (w_down && tick);
+	wire angle_down = s_press || (s_down && tick);
+	
+	always @(posedge CLOCK_50) begin
+		if (!resetn) begin
+			angle <= 10'd90;
+		end else if ((state == S_IDLE) && !space_down && !space_release && !move_req) begin
+			if (angle_up && !angle_down) begin
+				if (angle < MAX_ANGLE) begin
+					angle <= angle + 1'b1;
+				end
+			end else if (angle_down && !angle_up) begin
+				if (angle > MIN_ANGLE) begin
+					angle <= angle - 1'b1;
+				end
+			end
+		end
+	end
+	
+	wire[9:0] jump_dx;
+	wire[9:0] jump_dy;
+	wire jump_side;
+	
+	jump_calc calc(
+		.clk		(CLOCK_50),
+		.angle	(move_angle),
+		.dist 	(move_dist),
+		.dx_mag	(jump_dx),
+		.dx_side	(jump_side),
+		.dy_mag	(jump_dy)
+	);
+	
+	
+	//Jump
+	always @(posedge CLOCK_50) begin
+		move_req <= 1'b0;
+		if (!resetn) begin
+			hold_count <= 9'd0;
+			move_dist <= 9'd0;
+			
+		end else if (space_press) begin
+			hold_count <= 9'd1;
+			
+		end else if (space_down) begin
+			if (tick && (hold_count < MAX_DIST)) begin
+				hold_count <= hold_count + 1'b1;
+			end 
+		end
+		else if (space_release) begin
+				move_dist <= hold_count;
+				move_angle <= angle;
+				move_req <= (hold_count != 9'd0);
+				hold_count <= 9'd0;
+			
+		end
+	end
+	
 	wire [7:0] spr_x;
 	wire [6:0] spr_y;
 	wire [8:0] spr_color;
 	wire       spr_plot;
+	
 
 	draw_sprite sprite_inst (
 		.clk          (CLOCK_50),
@@ -198,7 +223,7 @@ module main (
 		.px           (sprite_x),
 		.py           (sprite_y),
 		.sprite_color (sprite_color),
-		.x            (spr_x),
+		.x            (spr_x),		
 		.y            (spr_y),
 		.color        (spr_color),
 		.plot         (spr_plot),
@@ -210,11 +235,14 @@ module main (
 	wire [6:0] go_y;
 	wire [8:0] go_color;
 	wire       go_plot;
+	reg [3:0] score_tens = 4'd0;
+	reg [3:0] score_ones = 4'd0;
+	reg move_ok;
 
 	GameOver overScreen (
 		.clk        (CLOCK_50),
 		.resetn     (resetn),
-		.start      (go_active),		//level is fine: GameOver only looks at start while idle
+		.start      (state == S_GAMEOVER),	
 		.score_tens (score_tens),
 		.score_ones (score_ones),
 		.x          (go_x),
@@ -225,26 +253,24 @@ module main (
 		.hex_ones   (HEX4)
 	);
 	
-	//VGA write-port mux: GameOver > clear > sprite
-	assign scr_x  = go_active ? go_x     : clr_active ? clr_x : spr_x;
-	assign scr_y  = go_active ? go_y     : clr_active ? clr_y : spr_y;
-	assign colour = go_active ? go_color : clr_active ? WHITE : spr_color;
-	assign plot   = go_active ? go_plot  : clr_active ? 1'b1  : spr_plot;
+	assign scr_x  = (state == S_GAMEOVER) ? go_x     : spr_x;
+	assign scr_y  = (state == S_GAMEOVER) ? go_y     : spr_y;
+	assign colour = (state == S_GAMEOVER) ? go_color : spr_color;
+	assign plot   = (state == S_GAMEOVER) ? go_plot  : spr_plot;
 	
 	
 	//main FSM
 	always@(posedge CLOCK_50) begin
+		move_ok <= 1'b0;	//one-cycle pulse (set below on a successful move)
 		if (!resetn) begin
 			sprite_x <= 8'd78;
 			sprite_y <= 7'd56;
 			sprite_color <= BLACK;
 			sprite_start <= 1'b0;
-			state <= S_CLEAR;
+			state <= S_DRAW;
 		end else begin
 			sprite_start <= 1'b0;
 			case(state) 
-				S_CLEAR:
-					if (clr_done) state <= S_DRAW;
 				S_DRAW: begin
 					sprite_color <= BLACK;
 					sprite_start <= 1'b1;
@@ -260,16 +286,31 @@ module main (
 					state <= S_ERASE_WAIT;
 				end
 				S_ERASE_WAIT: if (done) begin
-					if (X_MAX - sprite_x < move_dist) begin
-						sprite_x <= X_MAX;
-						state <= S_GAMEOVER;	//would run off the right edge -> game over
+					if (jump_dy > sprite_y) begin		//would leave the top of the screen
+						state <= S_GAMEOVER;
+					end else if (jump_side) begin	//jump to left
+						if (jump_dx > sprite_x) begin	//would leave the left edge
+							state <= S_GAMEOVER;
+						end else begin
+							sprite_x <= sprite_x - jump_dx;
+							sprite_y <= sprite_y - jump_dy;
+							move_ok <= 1'b1;
+							state <= S_DRAW;
+						end
 					end else begin
-						sprite_x <= sprite_x + move_dist;
-						state <= S_DRAW;
+						if (sprite_x + jump_dx > X_MAX) begin
+							state <= S_GAMEOVER;
+						end else begin
+							sprite_x <= sprite_x + jump_dx;
+							sprite_y <= sprite_y - jump_dy;
+							move_ok <= 1'b1;
+							state <= S_DRAW;
+						end
 					end
 				end
-				S_GAMEOVER: ;	//stay here until resetn
-				default: state <= S_CLEAR;
+				S_GAMEOVER: 
+					sprite_color <= WHITE;	//stay here until resetn
+				default: state <= S_DRAW;
 			endcase
 		end
 	end
@@ -287,18 +328,7 @@ module main (
 		end
 	end
 	
-	//white-clear counters: sweep 160 x 120 only while state == S_CLEAR
-	always @(posedge CLOCK_50) begin
-		if (!resetn || state != S_CLEAR) begin
-			clr_x <= 8'd0;
-			clr_y <= 7'd0;
-		end else if (clr_x == 8'd159) begin
-			clr_x <= 8'd0;
-			clr_y <= clr_y + 1'b1;
-		end else clr_x <= clr_x + 1'b1;
-	end
-	
-	assign LEDR = {4'b0, space_down, space_press, space_release, s_down, w_down, space_down};
+	assign LEDR = {7'b0, s_down, w_down, space_down};
 	
 
 endmodule

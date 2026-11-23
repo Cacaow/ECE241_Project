@@ -1,0 +1,179 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do main_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/University/Year\ 2/ECE241/fake_fpga/ECE241_Project {C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_pll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:58:25 on Nov 18,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project" C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_pll.v 
+# -- Compiling module vga_pll
+# 
+# Top level modules:
+# 	vga_pll
+# End time: 09:58:25 on Nov 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/University/Year\ 2/ECE241/fake_fpga/ECE241_Project {C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:58:25 on Nov 18,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project" C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_controller.v 
+# -- Compiling module vga_controller
+# 
+# Top level modules:
+# 	vga_controller
+# End time: 09:58:25 on Nov 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/University/Year\ 2/ECE241/fake_fpga/ECE241_Project {C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_address_translator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:58:25 on Nov 18,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project" C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_address_translator.v 
+# -- Compiling module vga_address_translator
+# 
+# Top level modules:
+# 	vga_address_translator
+# End time: 09:58:25 on Nov 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/University/Year\ 2/ECE241/fake_fpga/ECE241_Project {C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_adapter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:58:25 on Nov 18,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project" C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_adapter.v 
+# -- Compiling module vga_adapter
+# 
+# Top level modules:
+# 	vga_adapter
+# End time: 09:58:25 on Nov 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/University/Year\ 2/ECE241/fake_fpga/ECE241_Project {C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:58:25 on Nov 18,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project" C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v 
+# -- Compiling module main
+# 
+# Top level modules:
+# 	main
+# End time: 09:58:25 on Nov 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/University/Year\ 2/ECE241/fake_fpga/ECE241_Project {C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/ps2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:58:25 on Nov 18,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project" C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/ps2.v 
+# -- Compiling module ps2
+# 
+# Top level modules:
+# 	ps2
+# End time: 09:58:25 on Nov 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/University/Year\ 2/ECE241/fake_fpga/ECE241_Project {C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/hex.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:58:25 on Nov 18,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project" C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/hex.v 
+# -- Compiling module hex
+# 
+# Top level modules:
+# 	hex
+# End time: 09:58:26 on Nov 18,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/University/Year\ 2/ECE241/fake_fpga/ECE241_Project {C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/deb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:58:28 on Nov 18,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project" C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/deb.v 
+# -- Compiling module deb
+# 
+# Top level modules:
+# 	deb
+# End time: 09:58:28 on Nov 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/University/Year\ 2/ECE241/fake_fpga/ECE241_Project {C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/draw_sprite.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:58:28 on Nov 18,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project" C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/draw_sprite.v 
+# -- Compiling module draw_sprite
+# 
+# Top level modules:
+# 	draw_sprite
+# End time: 09:58:28 on Nov 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/University/Year\ 2/ECE241/fake_fpga/ECE241_Project {C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/key_detect.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:58:28 on Nov 18,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project" C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/key_detect.v 
+# -- Compiling module key_detect
+# 
+# Top level modules:
+# 	key_detect
+# End time: 09:58:28 on Nov 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work {C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/simulation/modelsim/tb_sprite_movement.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:58:37 on Nov 18,2026
+# vlog -reportprogress 300 -work work C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/simulation/modelsim/tb_sprite_movement.v 
+# -- Compiling module tb_sprite_movement
+# -- Compiling module vga_adapter
+# 
+# Top level modules:
+# 	tb_sprite_movement
+# 	vga_adapter
+# End time: 09:58:37 on Nov 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_sprite_movement
+# vsim work.tb_sprite_movement 
+# Start time: 09:58:50 on Nov 18,2026
+# Loading work.tb_sprite_movement
+# Loading work.main
+# Loading work.ps2
+# Loading work.hex
+# Loading work.deb
+# Loading work.vga_adapter
+# Loading work.key_detect
+# Loading work.draw_sprite
+add wave -position insertpoint  \
+{sim:/tb_sprite_movement/KEY[0]}
+add wave -position insertpoint  \
+sim:/tb_sprite_movement/S_IDLE
+add wave -position insertpoint  \
+sim:/tb_sprite_movement/LEDR
+run 500ns
+run 500ns
+# PASS: initial black sprite at (78,56)
+wave zoom full
+# {0 ps} {1050 ns}
+add wave -position insertpoint  \
+sim:/tb_sprite_movement/SPRITE_PIXELS
+run 1000ns
+wave zoom full
+# {0 ps} {2100 ns}
+add wave -position insertpoint  \
+sim:/tb_sprite_movement/dut/VGA/x
+add wave -position insertpoint  \
+sim:/tb_sprite_movement/dut/VGA/y
+add wave -position insertpoint  \
+sim:/tb_sprite_movement/dut/keys/space_down
+add wave -position insertpoint  \
+sim:/tb_sprite_movement/dut/keys/space_pressed
+add wave -position insertpoint  \
+sim:/tb_sprite_movement/dut/keys/space_released
+restart -f
+run 1000ns
+# PASS: initial black sprite at (78,56)
+run 10000ns
+# PASS: held Space -> erase, move +5, redraw at x=83
+# PASS: short tap -> erase, move +1, redraw at x=84
+# PASS: long hold -> capped +40, redraw at x=124
+# PASS: stationary during idle
+# ALL TESTS PASSED: 224 sprite pixel writes verified
+# ** Note: $finish    : C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/simulation/modelsim/tb_sprite_movement.v(227)
+#    Time: 6721 ns  Iteration: 0  Instance: /tb_sprite_movement
+# 1
+# Break in Module tb_sprite_movement at C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/simulation/modelsim/tb_sprite_movement.v line 227
+wave zoom full
+# {0 ps} {7057050 ps}
+# End time: 11:04:13 on Nov 18,2026, Elapsed time: 1:05:23
+# Errors: 0, Warnings: 0
