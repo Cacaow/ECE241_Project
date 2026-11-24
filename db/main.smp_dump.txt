@@ -1,5 +1,23 @@
 
 State Machine - |main|state
+<<<<<<< HEAD
+Name state.S_SHIFT state.S_GAMEOVER state.S_DRAW state.S_ERASE_WAIT state.S_ERASE state.S_IDLE state.S_DRAW_WAIT state.S_CLEAR 
+state.S_CLEAR 0 0 0 0 0 0 0 0 
+state.S_DRAW_WAIT 0 0 0 0 0 0 1 1 
+state.S_IDLE 0 0 0 0 0 1 0 1 
+state.S_ERASE 0 0 0 0 1 0 0 1 
+state.S_ERASE_WAIT 0 0 0 1 0 0 0 1 
+state.S_DRAW 0 0 1 0 0 0 0 1 
+state.S_GAMEOVER 0 1 0 0 0 0 0 1 
+state.S_SHIFT 1 0 0 0 0 0 0 1 
+
+State Machine - |main|cur_idx
+Name cur_idx.11 cur_idx.10 cur_idx.01 cur_idx.00 
+cur_idx.00 0 0 0 0 
+cur_idx.01 0 0 1 1 
+cur_idx.10 0 1 0 1 
+cur_idx.11 1 0 0 1 
+=======
 Name state.S_GAMEOVER state.S_ERASE_WAIT state.S_ERASE state.S_IDLE state.S_DRAW_WAIT state.S_DRAW 
 state.S_DRAW 0 0 0 0 0 0 
 state.S_DRAW_WAIT 0 0 0 0 1 1 
@@ -7,6 +25,7 @@ state.S_IDLE 0 0 0 1 0 1
 state.S_ERASE 0 0 1 0 0 1 
 state.S_ERASE_WAIT 0 1 0 0 0 1 
 state.S_GAMEOVER 1 0 0 0 0 1 
+>>>>>>> main
 
 State Machine - |main|GameOver:overScreen|state
 Name state.S_HOLD state.S_TEXT state.S_FILL state.S_IDLE 

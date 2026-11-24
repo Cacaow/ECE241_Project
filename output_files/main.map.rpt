@@ -1,5 +1,9 @@
 Analysis & Synthesis report for main
+<<<<<<< HEAD
+Mon Nov 23 13:13:32 2026
+=======
 Mon Nov 23 12:19:51 2026
+>>>>>>> main
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,6 +18,24 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
+<<<<<<< HEAD
+  9. State Machine - |main|state
+ 10. State Machine - |main|cur_idx
+ 11. State Machine - |main|GameOver:overScreen|state
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated
+ 18. Parameter Settings for User Entity Instance: ps2:ps2_inst|deb:deb_inst
+ 19. Parameter Settings for User Entity Instance: vga_adapter:VGA
+ 20. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
+ 21. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
+ 22. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 23. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
+ 24. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+=======
   9. Analysis & Synthesis DSP Block Usage Summary
  10. State Machine - |main|state
  11. State Machine - |main|GameOver:overScreen|state
@@ -30,6 +52,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  22. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
  23. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
  24. Parameter Settings for User Entity Instance: draw_sprite:sprite_inst
+>>>>>>> main
  25. altsyncram Parameter Settings by Entity Instance
  26. altpll Parameter Settings by Entity Instance
  27. Port Connectivity Checks: "key_detect:keys"
@@ -62,7 +85,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
+<<<<<<< HEAD
+; Analysis & Synthesis Status     ; Successful - Mon Nov 23 13:13:31 2026       ;
+=======
 ; Analysis & Synthesis Status     ; Successful - Mon Nov 23 12:19:51 2026       ;
+>>>>>>> main
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; main                                        ;
 ; Top-level Entity Name           ; main                                        ;
@@ -174,11 +201,11 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 24          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
@@ -186,6 +213,49 @@ refer to the applicable agreement for further details.
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
+<<<<<<< HEAD
+;     Processor 6            ;   0.0%      ;
+;     Processors 7-10        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; vga_pll.v                        ; yes             ; User Wizard-Generated File             ; C:/ECE241/ECE241_Project/vga_pll.v                                           ;         ;
+; vga_controller.v                 ; yes             ; User Verilog HDL File                  ; C:/ECE241/ECE241_Project/vga_controller.v                                    ;         ;
+; vga_address_translator.v         ; yes             ; User Verilog HDL File                  ; C:/ECE241/ECE241_Project/vga_address_translator.v                            ;         ;
+; vga_adapter.v                    ; yes             ; User Verilog HDL File                  ; C:/ECE241/ECE241_Project/vga_adapter.v                                       ;         ;
+; main.v                           ; yes             ; User Verilog HDL File                  ; C:/ECE241/ECE241_Project/main.v                                              ;         ;
+; ps2.v                            ; yes             ; User Verilog HDL File                  ; C:/ECE241/ECE241_Project/ps2.v                                               ;         ;
+; hex.v                            ; yes             ; User Verilog HDL File                  ; C:/ECE241/ECE241_Project/hex.v                                               ;         ;
+; deb.v                            ; yes             ; User Verilog HDL File                  ; C:/ECE241/ECE241_Project/deb.v                                               ;         ;
+; draw_sprite.v                    ; yes             ; User Verilog HDL File                  ; C:/ECE241/ECE241_Project/draw_sprite.v                                       ;         ;
+; key_detect.v                     ; yes             ; User Verilog HDL File                  ; C:/ECE241/ECE241_Project/key_detect.v                                        ;         ;
+; GameOver.v                       ; yes             ; User Verilog HDL File                  ; C:/ECE241/ECE241_Project/GameOver.v                                          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_svm1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/ECE241/ECE241_Project/db/altsyncram_svm1.tdf                              ;         ;
+; white_160x120_9.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/ECE241/ECE241_Project/white_160x120_9.mif                                 ;         ;
+; db/decode_7la.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/ECE241/ECE241_Project/db/decode_7la.tdf                                   ;         ;
+; db/decode_01a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/ECE241/ECE241_Project/db/decode_01a.tdf                                   ;         ;
+; db/mux_ofb.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/ECE241/ECE241_Project/db/mux_ofb.tdf                                      ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
+; db/altpll_80u.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/ECE241/ECE241_Project/db/altpll_80u.tdf                                   ;         ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+=======
 ;     Processors 6-16        ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -227,6 +297,7 @@ refer to the applicable agreement for further details.
 ; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc      ;         ;
 ; db/altpll_80u.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/db/altpll_80u.tdf        ;         ;
 +----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------+---------+
+>>>>>>> main
 
 
 +--------------------------------------------------------------+
@@ -234,6 +305,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
+<<<<<<< HEAD
+; Estimate of Logic utilization (ALMs needed) ; 357            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 585            ;
+;     -- 7 input functions                    ; 1              ;
+;     -- 6 input functions                    ; 118            ;
+;     -- 5 input functions                    ; 78             ;
+;     -- 4 input functions                    ; 116            ;
+;     -- <=3 input functions                  ; 272            ;
+=======
 ; Estimate of Logic utilization (ALMs needed) ; 413            ;
 ;                                             ;                ;
 ; Combinational ALUT usage for logic          ; 667            ;
@@ -242,6 +323,7 @@ refer to the applicable agreement for further details.
 ;     -- 5 input functions                    ; 77             ;
 ;     -- 4 input functions                    ; 147            ;
 ;     -- <=3 input functions                  ; 297            ;
+>>>>>>> main
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 347            ;
 ;                                             ;                ;
@@ -256,8 +338,13 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 345            ;
+<<<<<<< HEAD
+; Total fan-out                               ; 4331           ;
+; Average fan-out                             ; 3.75           ;
+=======
 ; Total fan-out                               ; 4724           ;
 ; Average fan-out                             ; 3.81           ;
+>>>>>>> main
 +---------------------------------------------+----------------+
 
 
@@ -266,6 +353,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Entity Name            ; Library Name ;
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------+------------------------+--------------+
+<<<<<<< HEAD
+; |main                                                   ; 585 (194)           ; 347 (101)                 ; 172800            ; 0          ; 98   ; 0            ; |main                                                                                                ; main                   ; work         ;
+;    |GameOver:overScreen|                                ; 137 (109)           ; 76 (76)                   ; 0                 ; 0          ; 0    ; 0            ; |main|GameOver:overScreen                                                                            ; GameOver               ; work         ;
+;       |hex:h_ones|                                      ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|GameOver:overScreen|hex:h_ones                                                                 ; hex                    ; work         ;
+;       |hex:h_tens|                                      ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|GameOver:overScreen|hex:h_tens                                                                 ; hex                    ; work         ;
+;    |draw_sprite:sprite_inst|                            ; 47 (47)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |main|draw_sprite:sprite_inst                                                                        ; draw_sprite            ; work         ;
+;    |key_detect:keys|                                    ; 30 (30)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |main|key_detect:keys                                                                                ; key_detect             ; work         ;
+;    |ps2:ps2_inst|                                       ; 95 (63)             ; 58 (52)                   ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst                                                                                   ; ps2                    ; work         ;
+=======
 ; |main                                                   ; 667 (178)           ; 347 (99)                  ; 172800            ; 2          ; 98   ; 0            ; |main                                                                                                ; main                   ; work         ;
 ;    |GameOver:overScreen|                                ; 137 (109)           ; 76 (76)                   ; 0                 ; 0          ; 0    ; 0            ; |main|GameOver:overScreen                                                                            ; GameOver               ; work         ;
 ;       |hex:h_ones|                                      ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|GameOver:overScreen|hex:h_ones                                                                 ; hex                    ; work         ;
@@ -274,12 +370,17 @@ refer to the applicable agreement for further details.
 ;    |jump_calc:calc|                                     ; 108 (108)           ; 21 (21)                   ; 0                 ; 2          ; 0    ; 0            ; |main|jump_calc:calc                                                                                 ; jump_calc              ; work         ;
 ;    |key_detect:keys|                                    ; 30 (30)             ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |main|key_detect:keys                                                                                ; key_detect             ; work         ;
 ;    |ps2:ps2_inst|                                       ; 100 (68)            ; 58 (52)                   ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst                                                                                   ; ps2                    ; work         ;
+>>>>>>> main
 ;       |deb:deb_inst|                                    ; 4 (4)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|deb:deb_inst                                                                      ; deb                    ; work         ;
 ;       |hex:hex_inst_1|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|hex:hex_inst_1                                                                    ; hex                    ; work         ;
 ;       |hex:hex_inst_2|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|hex:hex_inst_2                                                                    ; hex                    ; work         ;
 ;       |hex:hex_inst_3|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|hex:hex_inst_3                                                                    ; hex                    ; work         ;
 ;       |hex:hex_inst_4|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|ps2:ps2_inst|hex:hex_inst_4                                                                    ; hex                    ; work         ;
+<<<<<<< HEAD
+;    |vga_adapter:VGA|                                    ; 82 (7)              ; 30 (0)                    ; 172800            ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA                                                                                ; vga_adapter            ; work         ;
+=======
 ;    |vga_adapter:VGA|                                    ; 80 (5)              ; 30 (0)                    ; 172800            ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA                                                                                ; vga_adapter            ; work         ;
+>>>>>>> main
 ;       |altsyncram:VideoMemory|                          ; 6 (0)               ; 4 (0)                     ; 172800            ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|altsyncram:VideoMemory                                                         ; altsyncram             ; work         ;
 ;          |altsyncram_svm1:auto_generated|               ; 6 (0)               ; 4 (4)                     ; 172800            ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated                          ; altsyncram_svm1        ; work         ;
 ;             |decode_01a:rden_decode_b|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|decode_01a:rden_decode_b ; decode_01a             ; work         ;
@@ -316,6 +417,189 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
+<<<<<<< HEAD
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |main|state                                                                                                                                  ;
++--------------------+---------------+------------------+--------------+--------------------+---------------+--------------+-------------------+---------------+
+; Name               ; state.S_SHIFT ; state.S_GAMEOVER ; state.S_DRAW ; state.S_ERASE_WAIT ; state.S_ERASE ; state.S_IDLE ; state.S_DRAW_WAIT ; state.S_CLEAR ;
++--------------------+---------------+------------------+--------------+--------------------+---------------+--------------+-------------------+---------------+
+; state.S_CLEAR      ; 0             ; 0                ; 0            ; 0                  ; 0             ; 0            ; 0                 ; 0             ;
+; state.S_DRAW_WAIT  ; 0             ; 0                ; 0            ; 0                  ; 0             ; 0            ; 1                 ; 1             ;
+; state.S_IDLE       ; 0             ; 0                ; 0            ; 0                  ; 0             ; 1            ; 0                 ; 1             ;
+; state.S_ERASE      ; 0             ; 0                ; 0            ; 0                  ; 1             ; 0            ; 0                 ; 1             ;
+; state.S_ERASE_WAIT ; 0             ; 0                ; 0            ; 1                  ; 0             ; 0            ; 0                 ; 1             ;
+; state.S_DRAW       ; 0             ; 0                ; 1            ; 0                  ; 0             ; 0            ; 0                 ; 1             ;
+; state.S_GAMEOVER   ; 0             ; 1                ; 0            ; 0                  ; 0             ; 0            ; 0                 ; 1             ;
+; state.S_SHIFT      ; 1             ; 0                ; 0            ; 0                  ; 0             ; 0            ; 0                 ; 1             ;
++--------------------+---------------+------------------+--------------+--------------------+---------------+--------------+-------------------+---------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------+
+; State Machine - |main|cur_idx                                  ;
++------------+------------+------------+------------+------------+
+; Name       ; cur_idx.11 ; cur_idx.10 ; cur_idx.01 ; cur_idx.00 ;
++------------+------------+------------+------------+------------+
+; cur_idx.00 ; 0          ; 0          ; 0          ; 0          ;
+; cur_idx.01 ; 0          ; 0          ; 1          ; 1          ;
+; cur_idx.10 ; 0          ; 1          ; 0          ; 1          ;
+; cur_idx.11 ; 1          ; 0          ; 0          ; 1          ;
++------------+------------+------------+------------+------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------+
+; State Machine - |main|GameOver:overScreen|state                          ;
++--------------+--------------+--------------+--------------+--------------+
+; Name         ; state.S_HOLD ; state.S_TEXT ; state.S_FILL ; state.S_IDLE ;
++--------------+--------------+--------------+--------------+--------------+
+; state.S_IDLE ; 0            ; 0            ; 0            ; 0            ;
+; state.S_FILL ; 0            ; 0            ; 1            ; 1            ;
+; state.S_TEXT ; 0            ; 1            ; 0            ; 1            ;
+; state.S_HOLD ; 1            ; 0            ; 0            ; 1            ;
++--------------+--------------+--------------+--------------+--------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++------------------------------------------+----------------------------------------------+
+; Register name                            ; Reason for Removal                           ;
++------------------------------------------+----------------------------------------------+
+; plat_w[3][0]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[3][1]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[3][2]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[3][3]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[3][4]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[3][5]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[3][6]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[3][7]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[2][0]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[2][1]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[2][2]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[2][3]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[2][4]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[2][5]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[2][6]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[2][7]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[1][0]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[1][1]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[1][2]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[1][3]                             ; Stuck at VCC due to stuck port data_in       ;
+; plat_w[1][4]                             ; Stuck at VCC due to stuck port data_in       ;
+; plat_w[1][5]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[1][6]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[1][7]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[0][0]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[0][1]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[0][2]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[0][3]                             ; Stuck at VCC due to stuck port data_in       ;
+; plat_w[0][4]                             ; Stuck at VCC due to stuck port data_in       ;
+; plat_w[0][5]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[0][6]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_w[0][7]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[3][0]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[3][1]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[3][2]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[3][3]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[3][4]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[3][5]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[3][6]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[3][7]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[3][8]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[3][9]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[2][0]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[2][1]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[2][2]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[2][3]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[2][4]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[2][5]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[2][6]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[2][7]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[2][8]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[2][9]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[1][0]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[1][1]                             ; Stuck at VCC due to stuck port data_in       ;
+; plat_x[1][2]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[1][3]                             ; Stuck at VCC due to stuck port data_in       ;
+; plat_x[1][4]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[1][5]                             ; Stuck at VCC due to stuck port data_in       ;
+; plat_x[1][6]                             ; Stuck at VCC due to stuck port data_in       ;
+; plat_x[1][7]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[1][8]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[1][9]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[0][0]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[0][1]                             ; Stuck at VCC due to stuck port data_in       ;
+; plat_x[0][2]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[0][3]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[0][4]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[0][5]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[0][6]                             ; Stuck at VCC due to stuck port data_in       ;
+; plat_x[0][7]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[0][8]                             ; Stuck at GND due to stuck port data_in       ;
+; plat_x[0][9]                             ; Stuck at GND due to stuck port data_in       ;
+; sprite_y[0..2]                           ; Stuck at GND due to stuck port data_in       ;
+; sprite_y[3..5]                           ; Stuck at VCC due to stuck port data_in       ;
+; sprite_y[6]                              ; Stuck at GND due to stuck port data_in       ;
+; GameOver:overScreen|color[6..8]          ; Stuck at VCC due to stuck port data_in       ;
+; draw_sprite:sprite_inst|color[1..3,5..7] ; Merged with draw_sprite:sprite_inst|color[0] ;
+; draw_sprite:sprite_inst|color[8]         ; Merged with draw_sprite:sprite_inst|color[4] ;
+; GameOver:overScreen|color[1..5]          ; Merged with GameOver:overScreen|color[0]     ;
+; draw_sprite:sprite_inst|rh[1,4..7]       ; Merged with draw_sprite:sprite_inst|rh[0]    ;
+; draw_sprite:sprite_inst|rw[1,5..7]       ; Merged with draw_sprite:sprite_inst|rw[0]    ;
+; draw_sprite:sprite_inst|rx[8,9]          ; Merged with draw_sprite:sprite_inst|rw[0]    ;
+; draw_sprite:sprite_inst|rw[4]            ; Merged with draw_sprite:sprite_inst|rw[3]    ;
+; draw_sprite:sprite_inst|ry[4,5]          ; Merged with draw_sprite:sprite_inst|ry[3]    ;
+; draw_sprite:sprite_inst|ry[1,2]          ; Merged with draw_sprite:sprite_inst|ry[0]    ;
+; draw_sprite:sprite_inst|rc[1..3,5..7]    ; Merged with draw_sprite:sprite_inst|rc[0]    ;
+; draw_sprite:sprite_inst|rc[8]            ; Merged with draw_sprite:sprite_inst|rc[4]    ;
+; d_h[1,4..7]                              ; Merged with d_h[0]                           ;
+; d_w[1,5..7]                              ; Merged with d_w[0]                           ;
+; d_x[8,9]                                 ; Merged with d_w[0]                           ;
+; d_w[4]                                   ; Merged with d_w[3]                           ;
+; d_y[4,5]                                 ; Merged with d_y[3]                           ;
+; d_y[1,2]                                 ; Merged with d_y[0]                           ;
+; d_color[1..3,5..7]                       ; Merged with d_color[0]                       ;
+; d_color[8]                               ; Merged with d_color[4]                       ;
+; d_h[0]                                   ; Stuck at GND due to stuck port data_in       ;
+; d_w[0]                                   ; Stuck at GND due to stuck port data_in       ;
+; d_y[0]                                   ; Stuck at GND due to stuck port data_in       ;
+; draw_sprite:sprite_inst|rh[0]            ; Stuck at GND due to stuck port data_in       ;
+; draw_sprite:sprite_inst|rw[0]            ; Stuck at GND due to stuck port data_in       ;
+; draw_sprite:sprite_inst|ry[0]            ; Stuck at GND due to stuck port data_in       ;
+; state~9                                  ; Lost fanout                                  ;
+; state~10                                 ; Lost fanout                                  ;
+; state~11                                 ; Lost fanout                                  ;
+; cur_idx~2                                ; Lost fanout                                  ;
+; cur_idx~3                                ; Lost fanout                                  ;
+; GameOver:overScreen|state~6              ; Lost fanout                                  ;
+; GameOver:overScreen|state~7              ; Lost fanout                                  ;
+; cur_idx.11                               ; Merged with cur_idx.10                       ;
+; draw_sprite:sprite_inst|rw[2]            ; Merged with draw_sprite:sprite_inst|rh[3]    ;
+; draw_sprite:sprite_inst|ry[3]            ; Merged with draw_sprite:sprite_inst|rh[3]    ;
+; draw_sprite:sprite_inst|rw[3]            ; Merged with draw_sprite:sprite_inst|rh[2]    ;
+; draw_sprite:sprite_inst|ry[6]            ; Merged with draw_sprite:sprite_inst|rh[2]    ;
+; d_w[2]                                   ; Merged with d_h[3]                           ;
+; d_y[3]                                   ; Merged with d_h[3]                           ;
+; d_w[3]                                   ; Merged with d_h[2]                           ;
+; d_y[6]                                   ; Merged with d_h[2]                           ;
+; cur_idx.10                               ; Stuck at GND due to stuck port data_in       ;
+; Total Number of Removed Registers = 163  ;                                              ;
++------------------------------------------+----------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                        ;
++---------------+---------------------------+----------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------+---------------------------+----------------------------------------+
+; plat_w[3][0]  ; Stuck at GND              ; d_w[0], draw_sprite:sprite_inst|rw[0]  ;
+;               ; due to stuck port data_in ;                                        ;
+; sprite_y[0]   ; Stuck at GND              ; d_y[0], draw_sprite:sprite_inst|ry[0]  ;
+;               ; due to stuck port data_in ;                                        ;
+; d_h[0]        ; Stuck at GND              ; draw_sprite:sprite_inst|rh[0]          ;
+;               ; due to stuck port data_in ;                                        ;
++---------------+---------------------------+----------------------------------------+
+=======
 +------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |main|state                                                                                                  ;
 +--------------------+------------------+--------------------+---------------+--------------+-------------------+--------------+
@@ -359,6 +643,7 @@ Encoding Type:  One-Hot
 ; GameOver:overScreen|state~7            ; Lost fanout                                  ;
 ; Total Number of Removed Registers = 29 ;                                              ;
 +----------------------------------------+----------------------------------------------+
+>>>>>>> main
 
 
 +------------------------------------------------------+
@@ -367,15 +652,37 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 347   ;
+<<<<<<< HEAD
+; Number of registers using Synchronous Clear  ; 181   ;
+; Number of registers using Synchronous Load   ; 15    ;
+; Number of registers using Asynchronous Clear ; 78    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 184   ;
+=======
 ; Number of registers using Synchronous Clear  ; 175   ;
 ; Number of registers using Synchronous Load   ; 15    ;
 ; Number of registers using Asynchronous Clear ; 78    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 174   ;
+>>>>>>> main
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
+<<<<<<< HEAD
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; ps2:ps2_inst|parity_reg                ; 2       ;
+; sprite_x[6]                            ; 2       ;
+; sprite_x[3]                            ; 2       ;
+; sprite_x[1]                            ; 2       ;
+; sprite_x[2]                            ; 2       ;
+; Total number of inverted registers = 5 ;         ;
++----------------------------------------+---------+
+=======
 +---------------------------------------------------+
 ; Inverted Register Statistics                      ;
 +-----------------------------------------+---------+
@@ -395,6 +702,7 @@ Encoding Type:  One-Hot
 ; angle[6]                                ; 4       ;
 ; Total number of inverted registers = 12 ;         ;
 +-----------------------------------------+---------+
+>>>>>>> main
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -402,6 +710,41 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
+<<<<<<< HEAD
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |main|clr_y[1]                                                                                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |main|clr_x[4]                                                                                          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |main|GameOver:overScreen|blink_state[1]                                                                ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|score_tens[2]                                                                                     ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |main|vga_adapter:VGA|vga_controller:controller|yCounter[8]                                             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|sprite_x[4]                                                                                       ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |main|draw_sprite:sprite_inst|y[1]                                                                      ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |main|move_dist[5]                                                                                      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |main|ps2:ps2_inst|idle_cnt[1]                                                                          ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |main|GameOver:overScreen|y[5]                                                                          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |main|ps2:ps2_inst|cnt_reg[1]                                                                           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |main|score_ones[1]                                                                                     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |main|draw_sprite:sprite_inst|dy[6]                                                                     ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |main|hold_count[5]                                                                                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |main|ps2:ps2_inst|data_reg[15]                                                                         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |main|ps2:ps2_inst|data_reg[10]                                                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |main|draw_sprite:sprite_inst|dx[5]                                                                     ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |main|d_color[0]                                                                                        ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |main|d_x[7]                                                                                            ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|d_x[5]                                                                                            ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |main|GameOver:overScreen|cx[0]                                                                         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |main|GameOver:overScreen|tx[2]                                                                         ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |main|GameOver:overScreen|cy[3]                                                                         ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |main|GameOver:overScreen|ty[0]                                                                         ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |main|draw_idx[2]                                                                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|sprite_x[2]                                                                                       ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |main|scr_y[1]                                                                                          ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |main|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|mux_ofb:mux3|result_node[5] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |main|d_h                                                                                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|cur_idx                                                                                           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|cur_idx                                                                                           ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |main|GameOver:overScreen|state                                                                         ;
+; 12:1               ; 3 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |main|state                                                                                             ;
+=======
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |main|GameOver:overScreen|blink_state[1]                                                                ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|score_tens[0]                                                                                     ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |main|vga_adapter:VGA|vga_controller:controller|yCounter[3]                                             ;
@@ -429,6 +772,7 @@ Encoding Type:  One-Hot
 ; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |main|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|mux_ofb:mux3|result_node[2] ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |main|GameOver:overScreen|state                                                                         ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |main|state                                                                                             ;
+>>>>>>> main
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
 
 
@@ -952,17 +1296,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: draw_sprite:sprite_inst ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; W              ; 4     ; Signed Integer                              ;
-; H              ; 8     ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                   ;
 +-------------------------------------------+----------------------------------------+
@@ -1018,6 +1351,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_ff             ; 347                         ;
 ;     CLR               ; 18                          ;
 ;     CLR SCLR          ; 10                          ;
+<<<<<<< HEAD
+;     ENA               ; 49                          ;
+;     ENA CLR           ; 24                          ;
+;     ENA CLR SCLR      ; 26                          ;
+;     ENA SCLR          ; 70                          ;
+;     ENA SLD           ; 15                          ;
+;     SCLR              ; 75                          ;
+;     plain             ; 60                          ;
+; arriav_lcell_comb     ; 591                         ;
+;     arith             ; 187                         ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 151                         ;
+;         2 data inputs ; 18                          ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 7                           ;
+;         5 data inputs ; 2                           ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 393                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 48                          ;
+;         4 data inputs ; 109                         ;
+;         5 data inputs ; 76                          ;
+;         6 data inputs ; 118                         ;
+;     shared            ; 10                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 1                           ;
+=======
 ;     ENA               ; 37                          ;
 ;     ENA CLR           ; 24                          ;
 ;     ENA CLR SCLR      ; 26                          ;
@@ -1049,12 +1414,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         2 data inputs ; 21                          ;
 ;         3 data inputs ; 1                           ;
 ; arriav_mac            ; 2                           ;
+>>>>>>> main
 ; boundary_port         ; 98                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 27                          ;
 ;                       ;                             ;
+<<<<<<< HEAD
+; Max LUT depth         ; 5.80                        ;
+; Average LUT depth     ; 2.71                        ;
+=======
 ; Max LUT depth         ; 6.60                        ;
 ; Average LUT depth     ; 2.96                        ;
+>>>>>>> main
 +-----------------------+-----------------------------+
 
 
@@ -1073,31 +1444,59 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+<<<<<<< HEAD
+    Info: Processing started: Mon Nov 23 13:13:18 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+=======
     Info: Processing started: Mon Nov 23 12:19:37 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file gameover.v
     Info (12023): Found entity 1: GameOver File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/GameOver.v Line: 1
+>>>>>>> main
 Info (12021): Found 1 design units, including 1 entities, in source file vga_pll.v
-    Info (12023): Found entity 1: vga_pll File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_pll.v Line: 36
+    Info (12023): Found entity 1: vga_pll File: C:/ECE241/ECE241_Project/vga_pll.v Line: 36
 Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.v
-    Info (12023): Found entity 1: vga_controller File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_controller.v Line: 8
+    Info (12023): Found entity 1: vga_controller File: C:/ECE241/ECE241_Project/vga_controller.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file vga_address_translator.v
-    Info (12023): Found entity 1: vga_address_translator File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_address_translator.v Line: 4
+    Info (12023): Found entity 1: vga_address_translator File: C:/ECE241/ECE241_Project/vga_address_translator.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file vga_adapter.v
-    Info (12023): Found entity 1: vga_adapter File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_adapter.v Line: 42
+    Info (12023): Found entity 1: vga_adapter File: C:/ECE241/ECE241_Project/vga_adapter.v Line: 42
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
-    Info (12023): Found entity 1: main File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 4
+    Info (12023): Found entity 1: main File: C:/ECE241/ECE241_Project/main.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file ps2.v
-    Info (12023): Found entity 1: ps2 File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/ps2.v Line: 1
+    Info (12023): Found entity 1: ps2 File: C:/ECE241/ECE241_Project/ps2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hex.v
-    Info (12023): Found entity 1: hex File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/hex.v Line: 1
+    Info (12023): Found entity 1: hex File: C:/ECE241/ECE241_Project/hex.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file deb.v
-    Info (12023): Found entity 1: deb File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/deb.v Line: 1
+    Info (12023): Found entity 1: deb File: C:/ECE241/ECE241_Project/deb.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file draw_sprite.v
-    Info (12023): Found entity 1: draw_sprite File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/draw_sprite.v Line: 1
+    Info (12023): Found entity 1: draw_sprite File: C:/ECE241/ECE241_Project/draw_sprite.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file key_detect.v
+<<<<<<< HEAD
+    Info (12023): Found entity 1: key_detect File: C:/ECE241/ECE241_Project/key_detect.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file gameover.v
+    Info (12023): Found entity 1: GameOver File: C:/ECE241/ECE241_Project/GameOver.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at deb.v(19): created implicit net for "in_changed" File: C:/ECE241/ECE241_Project/deb.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at deb.v(20): created implicit net for "in_stable" File: C:/ECE241/ECE241_Project/deb.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at key_detect.v(26): created implicit net for "new_space" File: C:/ECE241/ECE241_Project/key_detect.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at key_detect.v(27): created implicit net for "new_w" File: C:/ECE241/ECE241_Project/key_detect.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at key_detect.v(28): created implicit net for "new_s" File: C:/ECE241/ECE241_Project/key_detect.v Line: 28
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at main.v(187): object "shift_left" assigned a value but never read File: C:/ECE241/ECE241_Project/main.v Line: 187
+Warning (10230): Verilog HDL assignment warning at main.v(208): truncated value with size 32 to match size of target (10) File: C:/ECE241/ECE241_Project/main.v Line: 208
+Info (12128): Elaborating entity "ps2" for hierarchy "ps2:ps2_inst" File: C:/ECE241/ECE241_Project/main.v Line: 62
+Info (12128): Elaborating entity "hex" for hierarchy "ps2:ps2_inst|hex:hex_inst_1" File: C:/ECE241/ECE241_Project/ps2.v Line: 41
+Info (12128): Elaborating entity "deb" for hierarchy "ps2:ps2_inst|deb:deb_inst" File: C:/ECE241/ECE241_Project/ps2.v Line: 54
+Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: C:/ECE241/ECE241_Project/main.v Line: 89
+Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator" File: C:/ECE241/ECE241_Project/vga_adapter.v Line: 129
+Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory" File: C:/ECE241/ECE241_Project/vga_adapter.v Line: 152
+Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|altsyncram:VideoMemory" File: C:/ECE241/ECE241_Project/vga_adapter.v Line: 152
+Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory" with the following parameter: File: C:/ECE241/ECE241_Project/vga_adapter.v Line: 152
+=======
     Info (12023): Found entity 1: key_detect File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/key_detect.v Line: 1
 Warning (10463): Verilog HDL Declaration warning at jump_calc.v(4): "dist" is SystemVerilog-2005 keyword File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/jump_calc.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file jump_calc.v
@@ -1121,6 +1520,7 @@ Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_ada
 Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_adapter.v Line: 152
 Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|altsyncram:VideoMemory" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_adapter.v Line: 152
 Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory" with the following parameter: File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_adapter.v Line: 152
+>>>>>>> main
     Info (12134): Parameter "width_a" = "9"
     Info (12134): Parameter "width_b" = "9"
     Info (12134): Parameter "intended_device_family" = "Cyclone V"
@@ -1137,21 +1537,21 @@ Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory"
     Info (12134): Parameter "power_up_uninitialized" = "FALSE"
     Info (12134): Parameter "init_file" = "./white_160x120_9.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_svm1.tdf
-    Info (12023): Found entity 1: altsyncram_svm1 File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/db/altsyncram_svm1.tdf Line: 33
+    Info (12023): Found entity 1: altsyncram_svm1 File: C:/ECE241/ECE241_Project/db/altsyncram_svm1.tdf Line: 33
 Info (12128): Elaborating entity "altsyncram_svm1" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_7la.tdf
-    Info (12023): Found entity 1: decode_7la File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/db/decode_7la.tdf Line: 22
-Info (12128): Elaborating entity "decode_7la" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|decode_7la:decode2" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/db/altsyncram_svm1.tdf Line: 46
+    Info (12023): Found entity 1: decode_7la File: C:/ECE241/ECE241_Project/db/decode_7la.tdf Line: 22
+Info (12128): Elaborating entity "decode_7la" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|decode_7la:decode2" File: C:/ECE241/ECE241_Project/db/altsyncram_svm1.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_01a.tdf
-    Info (12023): Found entity 1: decode_01a File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/db/decode_01a.tdf Line: 22
-Info (12128): Elaborating entity "decode_01a" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|decode_01a:rden_decode_b" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/db/altsyncram_svm1.tdf Line: 47
+    Info (12023): Found entity 1: decode_01a File: C:/ECE241/ECE241_Project/db/decode_01a.tdf Line: 22
+Info (12128): Elaborating entity "decode_01a" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|decode_01a:rden_decode_b" File: C:/ECE241/ECE241_Project/db/altsyncram_svm1.tdf Line: 47
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ofb.tdf
-    Info (12023): Found entity 1: mux_ofb File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/db/mux_ofb.tdf Line: 22
-Info (12128): Elaborating entity "mux_ofb" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|mux_ofb:mux3" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/db/altsyncram_svm1.tdf Line: 49
-Info (12128): Elaborating entity "vga_pll" for hierarchy "vga_adapter:VGA|vga_pll:mypll" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_adapter.v Line: 174
-Info (12128): Elaborating entity "altpll" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_pll.v Line: 53
-Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_pll.v Line: 53
-Info (12133): Instantiated megafunction "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" with the following parameter: File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_pll.v Line: 53
+    Info (12023): Found entity 1: mux_ofb File: C:/ECE241/ECE241_Project/db/mux_ofb.tdf Line: 22
+Info (12128): Elaborating entity "mux_ofb" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_svm1:auto_generated|mux_ofb:mux3" File: C:/ECE241/ECE241_Project/db/altsyncram_svm1.tdf Line: 49
+Info (12128): Elaborating entity "vga_pll" for hierarchy "vga_adapter:VGA|vga_pll:mypll" File: C:/ECE241/ECE241_Project/vga_adapter.v Line: 174
+Info (12128): Elaborating entity "altpll" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: C:/ECE241/ECE241_Project/vga_pll.v Line: 53
+Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: C:/ECE241/ECE241_Project/vga_pll.v Line: 53
+Info (12133): Instantiated megafunction "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" with the following parameter: File: C:/ECE241/ECE241_Project/vga_pll.v Line: 53
     Info (12134): Parameter "operation_mode" = "NORMAL"
     Info (12134): Parameter "intended_device_family" = "Cyclone II"
     Info (12134): Parameter "lpm_type" = "altpll"
@@ -1164,8 +1564,31 @@ Info (12133): Instantiated megafunction "vga_adapter:VGA|vga_pll:mypll|altpll:al
     Info (12134): Parameter "clk0_multiply_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll_80u.tdf
-    Info (12023): Found entity 1: altpll_80u File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/db/altpll_80u.tdf Line: 25
+    Info (12023): Found entity 1: altpll_80u File: C:/ECE241/ECE241_Project/db/altpll_80u.tdf Line: 25
 Info (12128): Elaborating entity "altpll_80u" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
+<<<<<<< HEAD
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_controller:controller" File: C:/ECE241/ECE241_Project/vga_adapter.v Line: 189
+Info (12128): Elaborating entity "key_detect" for hierarchy "key_detect:keys" File: C:/ECE241/ECE241_Project/main.v Line: 113
+Info (12128): Elaborating entity "draw_sprite" for hierarchy "draw_sprite:sprite_inst" File: C:/ECE241/ECE241_Project/main.v Line: 267
+Warning (10230): Verilog HDL assignment warning at draw_sprite.v(59): truncated value with size 32 to match size of target (8) File: C:/ECE241/ECE241_Project/draw_sprite.v Line: 59
+Warning (10230): Verilog HDL assignment warning at draw_sprite.v(60): truncated value with size 32 to match size of target (8) File: C:/ECE241/ECE241_Project/draw_sprite.v Line: 60
+Info (12128): Elaborating entity "GameOver" for hierarchy "GameOver:overScreen" File: C:/ECE241/ECE241_Project/main.v Line: 287
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/ECE241/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/ECE241/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/ECE241/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/ECE241/ECE241_Project/main.v Line: 18
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/ECE241/ECE241_Project/main.v Line: 20
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/ECE241/ECE241_Project/main.v Line: 20
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/ECE241/ECE241_Project/main.v Line: 21
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/ECE241/ECE241_Project/main.v Line: 21
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/ECE241/ECE241_Project/main.v Line: 22
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/ECE241/ECE241_Project/main.v Line: 22
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/ECE241/ECE241_Project/main.v Line: 26
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/ECE241/ECE241_Project/output_files/main.map.smsg
+=======
 Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_controller:controller" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_adapter.v Line: 189
 Info (12128): Elaborating entity "key_detect" for hierarchy "key_detect:keys" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 121
 Info (12128): Elaborating entity "jump_calc" for hierarchy "jump_calc:calc" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 186
@@ -1191,11 +1614,38 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/output_files/main.map.smsg
+>>>>>>> main
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/db/altpll_80u.tdf Line: 33
+Warning: RST port on the PLL is not properly connected on instance vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/ECE241/ECE241_Project/db/altpll_80u.tdf Line: 33
     Info: Must be connected
 Warning (21074): Design contains 13 input pin(s) that do not drive logic
+<<<<<<< HEAD
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/ECE241/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/ECE241/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/ECE241/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/ECE241/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/ECE241/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/ECE241/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/ECE241/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/ECE241/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/ECE241/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/ECE241/ECE241_Project/main.v Line: 10
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/ECE241/ECE241_Project/main.v Line: 11
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/ECE241/ECE241_Project/main.v Line: 11
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/ECE241/ECE241_Project/main.v Line: 11
+Info (21057): Implemented 797 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 81 output pins
+    Info (21061): Implemented 671 logic cells
+    Info (21064): Implemented 27 RAM segments
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4896 megabytes
+    Info: Processing ended: Mon Nov 23 13:13:32 2026
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:25
+=======
     Warning (15610): No output dependent on input pin "SW[0]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
     Warning (15610): No output dependent on input pin "SW[1]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
     Warning (15610): No output dependent on input pin "SW[2]" File: C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v Line: 10
@@ -1221,11 +1671,12 @@ Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
     Info: Processing ended: Mon Nov 23 12:19:51 2026
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:23
+>>>>>>> main
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/output_files/main.map.smsg.
+The suppressed messages can be found in C:/ECE241/ECE241_Project/output_files/main.map.smsg.
 
 

@@ -1,0 +1,14 @@
+# vsim -pli "C:\DESim\modelsim.vpi" -Lf 220model -Lf altera_mf_ver -Lf verilog -t 1ns -c -do "run -all" tb 
+# Start time: 23:42:07 on Nov 17,2026
+# Loading work.tb
+# Loading work.top
+# ** Error: (vsim-3033) ../top.v(11): Instantiation of 'adder' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/DUT File: ../top.v
+#         Searched libraries:
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/220model
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/18.1/modelsim_ase/verilog
+#             C:/ECE241/ECE241_Project/sim/work
+# Error loading design
+# End time: 23:42:08 on Nov 17,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
