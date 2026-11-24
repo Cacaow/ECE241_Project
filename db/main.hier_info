@@ -1,5 +1,9 @@
 |main
+<<<<<<< HEAD
 CLOCK_50 => CLOCK_50.IN5
+=======
+CLOCK_50 => CLOCK_50.IN4
+>>>>>>> main
 PS2_CLK => PS2_CLK.IN1
 PS2_DAT => PS2_DAT.IN1
 SW[0] => ~NO_FANOUT~
@@ -44,6 +48,7 @@ HEX3[3] <= HEX3[3].DB_MAX_OUTPUT_PORT_TYPE
 HEX3[4] <= HEX3[4].DB_MAX_OUTPUT_PORT_TYPE
 HEX3[5] <= HEX3[5].DB_MAX_OUTPUT_PORT_TYPE
 HEX3[6] <= HEX3[6].DB_MAX_OUTPUT_PORT_TYPE
+<<<<<<< HEAD
 HEX4[0] <= GameOver:overScreen.hex_ones
 HEX4[1] <= GameOver:overScreen.hex_ones
 HEX4[2] <= GameOver:overScreen.hex_ones
@@ -58,12 +63,28 @@ HEX5[3] <= GameOver:overScreen.hex_tens
 HEX5[4] <= GameOver:overScreen.hex_tens
 HEX5[5] <= GameOver:overScreen.hex_tens
 HEX5[6] <= GameOver:overScreen.hex_tens
+=======
+HEX4[0] <= GameOver:overScreen.hex_ones[0]
+HEX4[1] <= GameOver:overScreen.hex_ones[1]
+HEX4[2] <= GameOver:overScreen.hex_ones[2]
+HEX4[3] <= GameOver:overScreen.hex_ones[3]
+HEX4[4] <= GameOver:overScreen.hex_ones[4]
+HEX4[5] <= GameOver:overScreen.hex_ones[5]
+HEX4[6] <= GameOver:overScreen.hex_ones[6]
+HEX5[0] <= GameOver:overScreen.hex_tens[0]
+HEX5[1] <= GameOver:overScreen.hex_tens[1]
+HEX5[2] <= GameOver:overScreen.hex_tens[2]
+HEX5[3] <= GameOver:overScreen.hex_tens[3]
+HEX5[4] <= GameOver:overScreen.hex_tens[4]
+HEX5[5] <= GameOver:overScreen.hex_tens[5]
+HEX5[6] <= GameOver:overScreen.hex_tens[6]
+>>>>>>> main
 LEDR[0] <= key_detect:keys.space_down
 LEDR[1] <= key_detect:keys.w_down
 LEDR[2] <= key_detect:keys.s_down
-LEDR[3] <= key_detect:keys.space_released
-LEDR[4] <= key_detect:keys.space_pressed
-LEDR[5] <= key_detect:keys.space_down
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
 LEDR[6] <= <GND>
 LEDR[7] <= <GND>
 LEDR[8] <= <GND>
@@ -1681,6 +1702,89 @@ w_released <= w_released.DB_MAX_OUTPUT_PORT_TYPE
 s_down <= s_down~reg0.DB_MAX_OUTPUT_PORT_TYPE
 s_pressed <= s_pressed.DB_MAX_OUTPUT_PORT_TYPE
 s_released <= s_released.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|jump_calc:calc
+clk => dy_mag[0]~reg0.CLK
+clk => dy_mag[1]~reg0.CLK
+clk => dy_mag[2]~reg0.CLK
+clk => dy_mag[3]~reg0.CLK
+clk => dy_mag[4]~reg0.CLK
+clk => dy_mag[5]~reg0.CLK
+clk => dy_mag[6]~reg0.CLK
+clk => dy_mag[7]~reg0.CLK
+clk => dy_mag[8]~reg0.CLK
+clk => dy_mag[9]~reg0.CLK
+clk => dx_side~reg0.CLK
+clk => dx_mag[0]~reg0.CLK
+clk => dx_mag[1]~reg0.CLK
+clk => dx_mag[2]~reg0.CLK
+clk => dx_mag[3]~reg0.CLK
+clk => dx_mag[4]~reg0.CLK
+clk => dx_mag[5]~reg0.CLK
+clk => dx_mag[6]~reg0.CLK
+clk => dx_mag[7]~reg0.CLK
+clk => dx_mag[8]~reg0.CLK
+clk => dx_mag[9]~reg0.CLK
+angle[0] => LessThan0.IN20
+angle[0] => ang[0].DATAA
+angle[1] => LessThan0.IN19
+angle[1] => ang[1].DATAA
+angle[2] => LessThan0.IN18
+angle[2] => ang[2].DATAA
+angle[3] => LessThan0.IN17
+angle[3] => ang[3].DATAA
+angle[4] => LessThan0.IN16
+angle[4] => ang[4].DATAA
+angle[5] => LessThan0.IN15
+angle[5] => ang[5].DATAA
+angle[6] => LessThan0.IN14
+angle[6] => ang[6].DATAA
+angle[7] => LessThan0.IN13
+angle[7] => ang[7].DATAA
+angle[8] => LessThan0.IN12
+angle[9] => LessThan0.IN11
+dist[0] => Mult0.IN9
+dist[0] => Mult1.IN9
+dist[1] => Mult0.IN8
+dist[1] => Mult1.IN8
+dist[2] => Mult0.IN7
+dist[2] => Mult1.IN7
+dist[3] => Mult0.IN6
+dist[3] => Mult1.IN6
+dist[4] => Mult0.IN5
+dist[4] => Mult1.IN5
+dist[5] => Mult0.IN4
+dist[5] => Mult1.IN4
+dist[6] => Mult0.IN3
+dist[6] => Mult1.IN3
+dist[7] => Mult0.IN2
+dist[7] => Mult1.IN2
+dist[8] => Mult0.IN1
+dist[8] => Mult1.IN1
+dist[9] => Mult0.IN0
+dist[9] => Mult1.IN0
+dx_mag[0] <= dx_mag[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dx_mag[1] <= dx_mag[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dx_mag[2] <= dx_mag[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dx_mag[3] <= dx_mag[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dx_mag[4] <= dx_mag[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dx_mag[5] <= dx_mag[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dx_mag[6] <= dx_mag[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dx_mag[7] <= dx_mag[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dx_mag[8] <= dx_mag[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dx_mag[9] <= dx_mag[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dx_side <= dx_side~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dy_mag[0] <= dy_mag[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dy_mag[1] <= dy_mag[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dy_mag[2] <= dy_mag[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dy_mag[3] <= dy_mag[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dy_mag[4] <= dy_mag[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dy_mag[5] <= dy_mag[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dy_mag[6] <= dy_mag[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dy_mag[7] <= dy_mag[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dy_mag[8] <= dy_mag[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dy_mag[9] <= dy_mag[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|draw_sprite:sprite_inst

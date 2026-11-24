@@ -47,8 +47,6 @@ module main (
             slow_count <= slow_count + 1'b1;
     end
 
-	
-
 	//instantiate the ps2 (keyboard)
 	ps2 ps2_inst (
 		.clk            (CLOCK_50),
@@ -249,6 +247,7 @@ module main (
 	wire [6:0] spr_y;
 	wire [8:0] spr_color;
 	wire       spr_plot;
+	
 
 	draw_sprite sprite_inst (
 		.clk          (CLOCK_50),
@@ -271,11 +270,14 @@ module main (
 	wire [6:0] go_y;
 	wire [8:0] go_color;
 	wire       go_plot;
+	reg [3:0] score_tens = 4'd0;
+	reg [3:0] score_ones = 4'd0;
+	reg move_ok;
 
 	GameOver overScreen (
 		.clk        (CLOCK_50),
 		.resetn     (resetn),
-		.start      (go_active),		//level is fine: GameOver only looks at start while idle
+		.start      (state == S_GAMEOVER),	
 		.score_tens (score_tens),
 		.score_ones (score_ones),
 		.x          (go_x),
@@ -297,6 +299,7 @@ module main (
 	//  main FSM
 	//=====================================================================
 	always@(posedge CLOCK_50) begin
+		move_ok <= 1'b0;	//one-cycle pulse (set below on a successful move)
 		if (!resetn) begin
 			sprite_x      <= SPRITE_START_X;
 			sprite_y      <= SPRITE_START_Y;
@@ -418,18 +421,7 @@ module main (
 		end
 	end
 	
-	//white-clear counters: sweep 160 x 120 only while state == S_CLEAR
-	always @(posedge CLOCK_50) begin
-		if (!resetn || state != S_CLEAR) begin
-			clr_x <= 8'd0;
-			clr_y <= 7'd0;
-		end else if (clr_x == 8'd159) begin
-			clr_x <= 8'd0;
-			clr_y <= clr_y + 1'b1;
-		end else clr_x <= clr_x + 1'b1;
-	end
-	
-	assign LEDR = {4'b0, space_down, space_press, space_release, s_down, w_down, space_down};
+	assign LEDR = {7'b0, s_down, w_down, space_down};
 	
 
 endmodule

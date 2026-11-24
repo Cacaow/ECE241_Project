@@ -1,0 +1,13 @@
+-- 160x120 9-bit Plain White Background MIF File
+-- Total pixels = 19,200 (Addresses 0 to 19199, or 0 to 4AFF in Hex)
+
+DEPTH = 19200;
+WIDTH = 9;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+BEGIN
+    [0..4AFF] : 1FF;
+END;

@@ -7,6 +7,7 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
+<<<<<<< HEAD
 Z0 dC:/ECE241/ECE241_Project/simulation/modelsim
 vdraw_sprite
 Z1 !s110 1794984233
@@ -150,3 +151,6 @@ R10
 !s90 -reportprogress|300|tb_key_detect.v|
 !i113 1
 R6
+=======
+dC:/University/Year 2/ECE241/fake_fpga/ECE241_Project/simulation/modelsim
+>>>>>>> main

@@ -1,0 +1,250 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/University/Year 2/ECE241/fake_fpga/ECE241_Project/simulation/modelsim
+vdeb
+Z1 !s110 1795013908
+!i10b 1
+!s100 iSH_JaYgK0;2EQji<jRN93
+Ifi6Dd^8P^1A64lS?c3B7g1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1794413331
+8C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/deb.v
+FC:/University/Year 2/ECE241/fake_fpga/ECE241_Project/deb.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1795013908.000000
+!s107 C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/deb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project|C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/deb.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project}
+Z7 tCvgOpt 0
+vdraw_sprite
+R1
+!i10b 1
+!s100 OQNG7l@;T[mSg]Fmmni[<1
+I=?z3::k[FU_n<F@TlAT@]3
+R2
+R0
+w1794772393
+8C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/draw_sprite.v
+FC:/University/Year 2/ECE241/fake_fpga/ECE241_Project/draw_sprite.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/draw_sprite.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project|C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/draw_sprite.v|
+!i113 1
+R5
+R6
+R7
+vhex
+!s110 1795013906
+!i10b 1
+!s100 3lVEWIJfZL?WRV1NPX@l83
+IE>DBb[h;]=3C]j6R4Q^HF0
+R2
+R0
+w1794694603
+8C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/hex.v
+FC:/University/Year 2/ECE241/fake_fpga/ECE241_Project/hex.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z8 !s108 1795013905.000000
+!s107 C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/hex.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project|C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/hex.v|
+!i113 1
+R5
+R6
+R7
+vkey_detect
+R1
+!i10b 1
+!s100 R@6ZzQHR44=0^JDd;KLU11
+IRfaBIBFhMBagmC^e9@<7]3
+R2
+R0
+w1794803882
+8C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/key_detect.v
+FC:/University/Year 2/ECE241/fake_fpga/ECE241_Project/key_detect.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/key_detect.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project|C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/key_detect.v|
+!i113 1
+R5
+R6
+R7
+vmain
+Z9 !s110 1795013905
+!i10b 1
+!s100 7UTWmDQ32zQl6@<aoGo_f3
+IZhQHn0Mkm6Q6Z2A2An6]a0
+R2
+R0
+w1794872287
+8C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v
+FC:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v
+L0 4
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project|C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/main.v|
+!i113 1
+R5
+R6
+R7
+vps2
+R9
+!i10b 1
+!s100 ?`k0XDXb2P_h?H@PWcQVV2
+IoCcMZ4dCcaKGKjm5BUkIL1
+R2
+R0
+w1794413071
+8C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/ps2.v
+FC:/University/Year 2/ECE241/fake_fpga/ECE241_Project/ps2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/ps2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project|C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/ps2.v|
+!i113 1
+R5
+R6
+R7
+vtb_sprite_movement
+Z10 !s110 1795013917
+!i10b 1
+!s100 S?H0Ch=HPM14;E;GB:FH43
+Iol^mJ4id8YklihYlTY`EC0
+R2
+R0
+Z11 w1795013834
+Z12 8C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/simulation/modelsim/tb_sprite_movement.v
+Z13 FC:/University/Year 2/ECE241/fake_fpga/ECE241_Project/simulation/modelsim/tb_sprite_movement.v
+L0 21
+R3
+r1
+!s85 0
+31
+Z14 !s108 1795013917.000000
+Z15 !s107 C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/simulation/modelsim/tb_sprite_movement.v|
+Z16 !s90 -reportprogress|300|-work|work|C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/simulation/modelsim/tb_sprite_movement.v|
+!i113 1
+Z17 o-work work
+R7
+vvga_adapter
+R10
+!i10b 1
+!s100 8KKIeV5N<9CoNzHIBlHEH3
+IIk8g;RoWUd3ae4N^`KKl11
+R2
+R0
+R11
+R12
+R13
+L0 239
+R3
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 1
+R17
+R7
+vvga_address_translator
+R9
+!i10b 1
+!s100 eL4K3WV9@Bg4BLgM`B_J=2
+I2iNXTB8dH754O7HCS_f:T3
+R2
+R0
+Z18 w1794511001
+8C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_address_translator.v
+FC:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_address_translator.v
+L0 4
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_address_translator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project|C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_address_translator.v|
+!i113 1
+R5
+R6
+R7
+vvga_controller
+R9
+!i10b 1
+!s100 TD6AHTnXafJJDVOoGA2N80
+IUWeNJlPljBmEG1Ln[K=DY0
+R2
+R0
+R18
+8C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_controller.v
+FC:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_controller.v
+L0 8
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project|C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_controller.v|
+!i113 1
+R5
+R6
+R7
+vvga_pll
+R9
+!i10b 1
+!s100 1=G_AzlW3gHk182lm=jZM0
+Ig65H2>LX_XLe3P3F0cWc`2
+R2
+R0
+R18
+8C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_pll.v
+FC:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_pll.v
+L0 36
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/University/Year 2/ECE241/fake_fpga/ECE241_Project|C:/University/Year 2/ECE241/fake_fpga/ECE241_Project/vga_pll.v|
+!i113 1
+R5
+R6
+R7

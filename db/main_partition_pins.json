@@ -184,18 +184,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[3]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[4]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[5]",
-					"strict" : false
-				},
-				{
 					"name" : "VGA_R[2]",
 					"strict" : false
 				},
