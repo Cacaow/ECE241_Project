@@ -1,9 +1,5 @@
 |main
-<<<<<<< HEAD
 CLOCK_50 => CLOCK_50.IN5
-=======
-CLOCK_50 => CLOCK_50.IN4
->>>>>>> main
 PS2_CLK => PS2_CLK.IN1
 PS2_DAT => PS2_DAT.IN1
 SW[0] => ~NO_FANOUT~
@@ -48,22 +44,6 @@ HEX3[3] <= HEX3[3].DB_MAX_OUTPUT_PORT_TYPE
 HEX3[4] <= HEX3[4].DB_MAX_OUTPUT_PORT_TYPE
 HEX3[5] <= HEX3[5].DB_MAX_OUTPUT_PORT_TYPE
 HEX3[6] <= HEX3[6].DB_MAX_OUTPUT_PORT_TYPE
-<<<<<<< HEAD
-HEX4[0] <= GameOver:overScreen.hex_ones
-HEX4[1] <= GameOver:overScreen.hex_ones
-HEX4[2] <= GameOver:overScreen.hex_ones
-HEX4[3] <= GameOver:overScreen.hex_ones
-HEX4[4] <= GameOver:overScreen.hex_ones
-HEX4[5] <= GameOver:overScreen.hex_ones
-HEX4[6] <= GameOver:overScreen.hex_ones
-HEX5[0] <= GameOver:overScreen.hex_tens
-HEX5[1] <= GameOver:overScreen.hex_tens
-HEX5[2] <= GameOver:overScreen.hex_tens
-HEX5[3] <= GameOver:overScreen.hex_tens
-HEX5[4] <= GameOver:overScreen.hex_tens
-HEX5[5] <= GameOver:overScreen.hex_tens
-HEX5[6] <= GameOver:overScreen.hex_tens
-=======
 HEX4[0] <= GameOver:overScreen.hex_ones[0]
 HEX4[1] <= GameOver:overScreen.hex_ones[1]
 HEX4[2] <= GameOver:overScreen.hex_ones[2]
@@ -78,7 +58,6 @@ HEX5[3] <= GameOver:overScreen.hex_tens[3]
 HEX5[4] <= GameOver:overScreen.hex_tens[4]
 HEX5[5] <= GameOver:overScreen.hex_tens[5]
 HEX5[6] <= GameOver:overScreen.hex_tens[6]
->>>>>>> main
 LEDR[0] <= key_detect:keys.space_down
 LEDR[1] <= key_detect:keys.w_down
 LEDR[2] <= key_detect:keys.s_down
